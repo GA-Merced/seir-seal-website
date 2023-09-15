@@ -1,11 +1,11 @@
 ---
-title: Welcome to |CLASS NAME|
-description: Learn |SUBJECT|
+title: Welcome to SEIR-SEAL
+description: Software Engineering Immersive Flex
 template: splash
 hero:
   tagline: Welcome to the class website
   image:
-    file: ../../assets/edu.png
+    file: ../../assets/seirseal.png
   actions:
     - text: Curriculum
       link: /curriculum/main/
@@ -18,19 +18,19 @@ hero:
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## Curriculum
 
 <CardGrid stagger>
-	<Card title="Learn" icon="pencil">
-		Learn new things
+	<Card title="Unit 1" icon="pencil">
+		<a href="/curriculum/unit-1/">Fundamentals (HTML/CSS/JS)</a>
 	</Card>
-	<Card title="Apply" icon="add-document">
-		Apply what you learn
+	<Card title="Unit 2" icon="add-document">
+		<a href="/curriculum/unit-2/">NodeJS/Express/MongoDB</a>
 	</Card>
-	<Card title="Understand" icon="setting">
-		Get a grander understanding.
+	<Card title="Unit 3" icon="setting">
+		<a href="/curriculum/unit-3/">React with Express/Mongo</a>
 	</Card>
-	<Card title="Resources" icon="open-book">
-		Find useful resources for reference.
+	<Card title="Unit 4" icon="open-book">
+		<a href="/curriculum/unit-4/">Python/Django, Postgres with React</a>
 	</Card>
 </CardGrid>
