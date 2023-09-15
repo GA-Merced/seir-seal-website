@@ -1,0 +1,36 @@
+---
+title: Welcome to |CLASS NAME|
+description: Learn |SUBJECT|
+template: splash
+hero:
+  tagline: Welcome to the class website
+  image:
+    file: ../../assets/edu.png
+  actions:
+    - text: Curriculum
+      link: /curriculum/main/
+      icon: right-arrow
+      variant: primary
+    - text: Class Details
+      link: /reference/details/
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Next steps
+
+<CardGrid stagger>
+	<Card title="Learn" icon="pencil">
+		Learn new things
+	</Card>
+	<Card title="Apply" icon="add-document">
+		Apply what you learn
+	</Card>
+	<Card title="Understand" icon="setting">
+		Get a grander understanding.
+	</Card>
+	<Card title="Resources" icon="open-book">
+		Find useful resources for reference.
+	</Card>
+</CardGrid>
