@@ -5,7 +5,7 @@ import starlight from "@astrojs/starlight";
 export default defineConfig({
   integrations: [
     starlight({
-      title: "Class Name",
+      title: "Seir-Kale",
       social: {
         github: "https://github.com/AlexMercedCoder/starlight-class-template/",
       },
