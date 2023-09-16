@@ -1,6 +1,6 @@
 ---
-title: Example Reference
-description: A reference page in my new Starlight docs site.
+title: CSS Reference
+description: A reference page for CSS
 ---
 
 ### What is CSS?
