@@ -1,6 +1,6 @@
 ---
-title: Example Reference
-description: A reference page in my new Starlight docs site.
+title: Javascript Classes/OOP
+description: A reference page on javascript classes and object oriented programming
 ---
 
 Reference pages are ideal for outlining how things work in terse and clear terms.

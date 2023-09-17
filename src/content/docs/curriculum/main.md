@@ -1,10 +1,19 @@
 ---
-title: Example Guide
+title: Curriculum Overview
 description: A guide in my new Starlight docs site.
 ---
 
-Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
-Writing a good guide requires thinking about what your users are trying to do.
+This course is made of four units and capstone project:
+
+- **Unit 1 - Fundamentals:** Terminal, Git, HTML, CSS, JS, jQuery/DOM
+
+- **Unit 2 - Backend Development with Javascript:** Node, ExpressJS, MongoDB, EJS
+
+- **Unit 3 - Frontend Development with React:** React
+
+- **Unit 4 - Backend Development with Python:** Python, Django, PostgresDB, SQL
+
+- **Capstone Project**: Teach yourself one new topic along with everything you learned for one final project.
 
 ## Further reading
 
