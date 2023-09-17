@@ -85,6 +85,123 @@ console.log(sum(1, 2, 3, 4)); // 10
 
 JavaScript arrays are versatile and widely used for storing and manipulating collections of data. Understanding array methods, destructuring, and the spread/rest operators is essential for effective JavaScript programming.
 
+## JavaScript Objects:
+### 1. What Are They?
+In JavaScript, an object is a data structure that allows you to store and organize data as key-value pairs. Objects are used to represent real-world entities or abstract concepts. Each key (property) in an object is associated with a value, and these properties can be of different data types, including other objects and functions.
+
+### 2. Syntax:
+JavaScript objects are defined using curly braces `{}` and consist of a collection of key-value pairs separated by colons (`:`). Keys are strings (or symbols in ES6), and values can be of any data type.
+
+#### Example of object creation:
+
+```js
+let person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30
+};
+```
+
+### 3. Dot Notation vs. Square Bracket Notation:
+You can access and modify object properties using either dot notation or square bracket notation.
+
+**Dot Notation:** Uses a period followed by the property name.
+
+#### Example:
+
+```js
+let firstName = person.firstName; // "John"
+person.age = 31; // Modifying the age property
+```
+
+**Square Bracket Notation:** Uses square brackets with the property name as a string.
+
+#### Example:
+
+```js
+let lastName = person['lastName']; // "Doe"
+person['age'] = 32; // Modifying the age property
+```
+
+Square bracket notation is useful when property names contain special characters or spaces, or when the property name is dynamic.
+
+### 4. Defining Methods in Objects:
+You can define methods (functions) as object properties. These methods can perform actions or calculations related to the object's data.
+
+#### Example:
+
+```js
+let calculator = {
+  add: function(a, b) {
+    return a + b;
+  },
+  subtract: function(a, b) {
+    return a - b;
+  }
+};
+
+
+let sum = calculator.add(5, 3); // 8
+let difference = calculator.subtract(10, 4); // 6
+```
+
+In modern JavaScript (ES6+), you can use concise method notation:
+
+```js
+let calculator = {
+  add(a, b) {
+    return a + b;
+  },
+  subtract(a, b) {
+    return a - b;
+  }
+};
+```
+
+### 5. Destructuring Objects:
+Object destructuring allows you to extract values from an object and assign them to variables in a concise way.
+
+#### Example:
+
+```js
+let person = {
+  firstName: "Alice",
+  lastName: "Smith",
+  age: 25
+};
+
+let { firstName, age } = person;
+
+console.log(firstName); // "Alice"
+console.log(age); // 25
+```
+
+### 6. Spread/Rest Operator with Objects:
+The spread (...) and rest (...) operators can be used with objects for various purposes.
+
+**Spread Operator (...):** Allows you to create a shallow copy of an object or merge objects.
+#### Example:
+
+```js
+let defaults = { theme: "light", fontSize: 12 };
+let userSettings = { fontSize: 16 };
+
+let mergedSettings = { ...defaults, ...userSettings }; // Merging objects
+```
+**Rest Operator (...):** Collects remaining properties into a new object.
+#### Example:
+
+```js
+let { firstName, ...rest } = person;
+
+console.log(firstName); // "Alice"
+console.log(rest); // { lastName: "Smith", age: 25 }
+```
+
+The rest operator can be used to collect remaining properties when destructuring objects or to gather arguments into an object in function parameters.
+
+JavaScript objects are fundamental to structuring and organizing data in your code. Understanding how to work with objects, define methods, destructure them, and use spread/rest operators provides you with powerful tools for building complex applications.
+
 ## Further reading
 
 - Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
