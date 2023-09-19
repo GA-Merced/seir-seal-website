@@ -3,6 +3,8 @@ title: Useful Javascript Tricks
 description: Reference of useful JS Tricks
 ---
 
+## 1-25
+
 | Trick         | Purpose                               | Syntax                                           | Example                                     |
 |---------------|---------------------------------------|--------------------------------------------------|---------------------------------------------|
 | Trick 1       | Remove duplicates from an array       | `Array.from(new Set(array))`                     | `const uniqueArray = Array.from(new Set([1, 2, 2, 3]))` |
@@ -30,6 +32,8 @@ description: Reference of useful JS Tricks
 | Trick 23      | Swap the values of two variables      | `let temp = a; a = b; b = temp;`               | ```javascript let a = 1; let b = 2; let temp = a; a = b; b = temp;``` |
 | Trick 24      | Truncate a string to a specified length | `const truncated = string.slice(0, maxLength);` | `const string = 'This is a long string'; const maxLength = 10; const truncated = string.slice(0, maxLength);` |
 | Trick 25      | Calculate the factorial of a number   | `function factorial(n) { return n <= 1 ? 1 : n * factorial(n - 1); }` | `const result = factorial(5);` |
+
+## 26-50
 
 | Trick         | Purpose                               | Syntax                                           | Example                                     |
 |---------------|---------------------------------------|--------------------------------------------------|---------------------------------------------|
@@ -59,6 +63,8 @@ description: Reference of useful JS Tricks
 | Trick 49      | Get a random item from an array       | `const randomItem = array[Math.floor(Math.random() * array.length)];` | `const array = [1, 2, 3, 4, 5]; const randomItem = array[Math.floor(Math.random() * array.length)];` |
 | Trick 50      | Convert a string with spaces to kebab case | `const kebabCase = string.replace(/\s+/g, '-').toLowerCase();` | `const string = 'This is a Test String'; const kebabCase = string.replace(/\s+/g, '-').toLowerCase();` |
 
+## 51-75
+
 | Trick         | Purpose                               | Syntax                                           | Example                                     |
 |---------------|---------------------------------------|--------------------------------------------------|---------------------------------------------|
 | Trick 51      | Check if a string starts with a substring | `const startsWith = string.startsWith(substring);` | `const string = 'Hello, world!'; const startsWith = string.startsWith('Hello');` |
@@ -87,7 +93,7 @@ description: Reference of useful JS Tricks
 | Trick 74      | Create an array with a sequence of numbers | `const sequence = Array.from({ length: n }, (_, i) => i + start);` | `const n = 5; const start = 1; const sequence = Array.from({ length: n }, (_, i) => i + start);` |
 | Trick 75      | Check if a year is a leap year        | `const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);` | `const year = 2024; const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);` |
 
-Certainly! Here are 25 more JavaScript tricks, along with their purposes, syntax, and examples in raw markdown format:
+## 76-100
 
 ```markdown
 | Trick         | Purpose                               | Syntax                                           | Example                                     |
@@ -119,7 +125,6 @@ Certainly! Here are 25 more JavaScript tricks, along with their purposes, syntax
 | Trick 100     | Convert a string to an array of characters | `const charArray = [...string];`               | `const string = 'hello'; const charArray = [...string];` |
 ```
 
-You can continue to expand your table or use these examples as needed.
 
 ## Further reading
 
