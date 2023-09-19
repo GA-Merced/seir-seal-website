@@ -53,7 +53,7 @@ These are some of the common global Vim movements and commands used for file man
 
 ### Marking Text (Visual Mode)
 | Command           | Description                                        |
-| ----------------- | -------------------------------------------------- ||
+| ----------------- | -------------------------------------------------- |
 | `o`               | Move to the other end of the marked area.          |
 | `O`               | Move to the other corner of the block.             |
 | `aw`              | Mark a word.                                       |
