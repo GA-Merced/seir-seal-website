@@ -125,6 +125,112 @@ Functions are essential in JavaScript and are used in various scenarios:
 
 Use functions whenever you need to encapsulate a specific task, abstract away complexity, or enable code reuse in your JavaScript applications.
 
+## JavaScript Promises
+### What are Promises?
+Promises are a fundamental part of asynchronous programming in JavaScript. They represent a future value or the result of an asynchronous operation, which may be successful or fail. Promises provide a way to handle asynchronous tasks more easily, making code cleaner and more readable.
+
+### A promise can be in one of three states:
+
+- **Pending:** The initial state, neither fulfilled nor rejected.
+- **Fulfilled:** The asynchronous operation completed successfully, and a result is available.
+- **Rejected:** The asynchronous operation failed, and an error reason is available.
+### How to Use Promises
+Promises are created using the Promise constructor. Here's a basic example of how to create and use a promise:
+
+```js
+const myPromise = new Promise((resolve, reject) => {
+  // Simulate an asynchronous operation
+  setTimeout(() => {
+    const success = true; // Simulated success
+    if (success) {
+      resolve('Operation succeeded');
+    } else {
+      reject('Operation failed');
+    }
+  }, 1000);
+});
+
+myPromise
+  .then((result) => {
+    console.log(result); // 'Operation succeeded'
+  })
+  .catch((error) => {
+    console.error(error); // 'Operation failed'
+  });
+```
+### Using Promises with HTTP Requests
+#### Using fetch with .then
+```js
+fetch('https://api.example.com/data')
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error('Fetch error:', error);
+  });
+```
+#### Using fetch with async/await
+
+```js
+async function fetchData() {
+  try {
+    const response = await fetch('https://api.example.com/data');
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Fetch error:', error);
+  }
+}
+
+fetchData();
+```
+#### Using $.ajax (jQuery) with .then
+```js
+$.ajax({
+  url: 'https://api.example.com/data',
+  method: 'GET',
+})
+  .done((data) => {
+    console.log(data);
+  })
+  .fail((jqXHR, textStatus, errorThrown) => {
+    console.error('jQuery AJAX error:', textStatus, errorThrown);
+  });
+```
+#### Using axios with .then
+```js
+axios.get('https://api.example.com/data')
+  .then((response) => {
+    console.log(response.data);
+  })
+  .catch((error) => {
+    console.error('Axios error:', error);
+  });
+```
+#### Using axios with async/await
+```js
+async function fetchData() {
+  try {
+    const response = await axios.get('https://api.example.com/data');
+    console.log(response.data);
+  } catch (error) {
+    console.error('Axios error:', error);
+  }
+}
+
+fetchData();
+```
+Promises provide a structured way to work with asynchronous code, making it easier to manage complex tasks and handle errors gracefully. You can choose between using .then for chaining or async/await for more concise and readable asynchronous code, depending on your preference and project requirements.
+
 ## Further reading
 
 - Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
