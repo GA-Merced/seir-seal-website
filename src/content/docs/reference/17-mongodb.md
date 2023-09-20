@@ -183,3 +183,133 @@ process.on('SIGINT', () => {
 });
 ```
 By following these steps, you can seamlessly integrate MongoDB with your Express.js application using Mongoose, allowing you to perform database operations in a structured and efficient manner.
+
+## Using MongoDB with Python
+MongoDB is a popular NoSQL database that can be easily integrated with Python applications. Two commonly used libraries for interacting with MongoDB in Python are pymongo and mongoengine. We'll explore how to use these libraries in the context of three popular Python web frameworks: Flask, FastAPI, and Django.
+
+### 1. Using pymongo with Python
+#### Installation
+First, you'll need to install the pymongo library using pip:
+
+```
+pip install pymongo
+```
+#### Basic Usage
+```py
+import pymongo
+
+# Connect to MongoDB
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+db = client["mydatabase"]
+
+# Create a collection
+collection = db["mycollection"]
+
+# Insert a document
+data = {"name": "John", "age": 30}
+inserted_document = collection.insert_one(data)
+
+# Find documents
+result = collection.find({"age": {"$gte": 18}})
+for document in result:
+    print(document)
+
+# Update a document
+collection.update_one({"name": "John"}, {"$set": {"age": 31}})
+
+# Delete a document
+collection.delete_one({"name": "John"})
+```
+### 2. Integrating MongoDB with Flask
+#### Installation
+For Flask, you can install the Flask-PyMongo extension, which simplifies MongoDB integration:
+
+```
+pip install Flask-PyMongo
+```
+
+#### Example Integration
+
+```py
+from flask import Flask, jsonify
+from flask_pymongo import PyMongo
+
+app = Flask(__name__)
+app.config["MONGO_URI"] = "mongodb://localhost:27017/mydatabase"
+mongo = PyMongo(app)
+
+@app.route("/")
+def get_data():
+    collection = mongo.db.mycollection
+    result = collection.find({"age": {"$gte": 18}})
+    data = [document for document in result]
+    return jsonify(data)
+
+if __name__ == "__main__":
+    app.run()
+```
+### 3. Integrating MongoDB with FastAPI
+#### Installation
+For FastAPI, you can use the motor library along with fastapi for asynchronous MongoDB integration:
+
+```
+pip install fastapi[all] motor
+```
+
+#### Example Integration
+
+```py
+from fastapi import FastAPI
+from motor.motor_asyncio import AsyncIOMotorClient
+
+app = FastAPI()
+
+@app.on_event("startup")
+async def startup_db_client():
+    app.mongodb_client = AsyncIOMotorClient("mongodb://localhost:27017")
+    app.mongodb = app.mongodb_client["mydatabase"]
+
+@app.on_event("shutdown")
+async def shutdown_db_client():
+    app.mongodb_client.close()
+
+@app.get("/")
+async def get_data():
+    collection = app.mongodb["mycollection"]
+    result = await collection.find({"age": {"$gte": 18}}).to_list(10)
+    return result
+```
+
+### 4. Integrating MongoDB with Django
+#### Installation
+Django comes with its MongoDB integration package called djongo. You can install it using pip:
+
+```
+pip install djongo
+```
+#### Example Integration
+In your Django settings (settings.py), configure the database to use MongoDB:
+
+```py
+DATABASES = {
+    "default": {
+        "ENGINE": "djongo",
+        "ENFORCE_SCHEMA": True,  # Set to True to enforce schema validation
+        "NAME": "mydatabase",
+    }
+}
+```
+Then, you can use Django's ORM to interact with MongoDB like you would with a traditional SQL database.
+
+```py
+from django.db import models
+
+class MyModel(models.Model):
+    name = models.CharField(max_length=100)
+    age = models.IntegerField()
+
+# Example query
+
+result = MyModel.objects.filter(age__gte=18)
+```
+By following these examples, you can use MongoDB with Python and integrate it seamlessly into your web applications built with Flask, FastAPI, or Django, depending on your project's requirements and preferences.

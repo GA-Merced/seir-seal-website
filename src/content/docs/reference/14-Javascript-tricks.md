@@ -95,7 +95,7 @@ description: Reference of useful JS Tricks
 
 ## 76-100
 
-```markdown
+
 | Trick         | Purpose                               | Syntax                                           | Example                                     |
 |---------------|---------------------------------------|--------------------------------------------------|---------------------------------------------|
 | Trick 76      | Create an array with unique values     | `const uniqueArray = [...new Set(array)];`      | `const array = [1, 2, 2, 3, 3, 4]; const uniqueArray = [...new Set(array)];` |
@@ -123,7 +123,7 @@ description: Reference of useful JS Tricks
 | Trick 98      | Get the current time in milliseconds since epoch | `const currentTimeMillis = Date.now();`       | `const currentTimeMillis = Date.now();` |
 | Trick 99      | Find the index of the first occurrence of an element in an array | `const index = array.indexOf(element);`      | `const array = ['apple', 'banana', 'cherry']; const element = 'banana'; const index = array.indexOf(element);` |
 | Trick 100     | Convert a string to an array of characters | `const charArray = [...string];`               | `const string = 'hello'; const charArray = [...string];` |
-```
+
 
 
 ## Further reading

@@ -60,6 +60,123 @@ Python supports various data types and operators for performing operations on da
 
 These basics provide a foundation for writing Python code. As you explore Python further, you'll delve into more advanced concepts and libraries to build a wide range of applications.
 
+## What is Django and Getting Started
+### What is Django?
+Django is a high-level and open-source web framework written in Python that encourages rapid development and clean, pragmatic design. It follows the Model-View-Controller (MVC) architectural pattern, but in Django, it's referred to as Model-View-Template (MVT).
+
+Django provides a robust set of tools and libraries for building web applications, making it a popular choice for developers. Some of its key features include:
+
+**Built-in Admin Interface:** Django includes an admin interface for managing application data, which can be customized to suit your needs.
+
+**ORM (Object-Relational Mapping):** Django's ORM allows you to interact with your database using Python code, abstracting away much of the SQL database interaction.
+
+**URL Routing:** Django has a flexible URL routing system that helps you map URLs to views.
+
+**Template Engine:** It includes a powerful template system for generating HTML dynamically.
+
+**Security:** Django includes built-in security features to protect against common web vulnerabilities, such as cross-site scripting (XSS) and SQL injection.
+
+**Scalability:** Django is scalable and can handle applications of all sizes, from small projects to large and complex web applications.
+
+### Getting Started with Django
+To get started with Django, follow these steps:
+
+#### 1. Installation
+First, make sure you have Python installed on your system (Django requires Python 3.6 or later). Then, install Django using pip:
+
+```
+pip install Django
+```
+
+#### 2. Create a Django Project
+To create a new Django project, run the following command:
+
+```
+django-admin startproject projectname
+```
+
+Replace projectname with the desired name of your project. This command will create a project directory with the necessary files and structure.
+
+#### 3. Create a Django App
+Django projects are organized into apps. You can create a new app within your project using the following command:
+
+```
+python manage.py startapp appname
+```
+
+Replace appname with the name of your app. This command will create a directory for your app with the required files.
+
+## Models in Django and How to Write Them
+In Django, models represent the structure and schema of your application's database tables. Models are defined as Python classes, allowing you to create, retrieve, update, and delete records in your database using Python code, without having to write SQL queries manually. This section will cover the basics of writing models in Django.
+
+### Defining a Model
+To define a model in Django, you need to create a Python class that inherits from django.db.models.Model. Each attribute of the class represents a field in the corresponding database table. Django provides a variety of field types to suit different data types and relationships.
+
+Here's an example of a simple Django model for a blog application:
+
+python
+```py
+from django.db import models
+
+class BlogPost(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    pub_date = models.DateTimeField('date published')
+    author = models.ForeignKey('Author', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.title
+```
+
+In this example:
+
+- BlogPost is the name of the model.
+- title, content, pub_date, and author are fields in the model.
+- models.CharField and models.TextField are field types for string and text data, respectively.
+- models.DateTimeField is used for date and time data.
+- models.ForeignKey establishes a many-to-one relationship with the Author model.
+### Model Fields
+Django provides various field types to define the type and constraints of your model's attributes. Here are some common field types:
+
+- **CharField:** For short text fields, such as titles or names.
+- **TextField:** For longer text fields, such as content or descriptions.
+- **IntegerField, FloatField, DecimalField:** For numeric data types.
+- **DateField, TimeField, DateTimeField:** For date and time data.
+- **BooleanField:** For Boolean (True/False) values.
+- **EmailField, URLField:** For email addresses and URLs.
+- **ForeignKey:** For establishing relationships between models.
+### Model Methods
+You can define methods within your model to perform actions related to the model's data. In the example above, the __str__ method is defined to return a human-readable representation of a BlogPost object, which is helpful for debugging and display purposes.
+
+### Migrations
+After defining your models, you need to create and apply migrations to update your database schema. Migrations are Django's way of tracking and applying changes to the database.
+
+To create migrations, run:
+
+```
+python manage.py makemigrations
+```
+
+To apply migrations and create the database tables, run:
+
+```
+python manage.py migrate
+```
+
+### Admin Interface
+Django provides a built-in admin interface that allows you to manage your application's data. To make your models accessible in the admin interface, you can register them in the admin.py file of your app. Here's an example:
+
+```py
+from django.contrib import admin
+from .models import BlogPost
+
+admin.site.register(BlogPost)
+```
+
+This allows you to create, view, update, and delete BlogPost objects through the admin interface.
+
+
+
 ## Further reading
 
 - Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
