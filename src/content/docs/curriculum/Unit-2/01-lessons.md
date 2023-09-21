@@ -1,6 +1,6 @@
 ---
 title: Unit 2 Lessons Rubric
-description: Topics and Lessons for Unit 2
+description: Topics and Lessons for Unit 2 on backend with NodeJS & Express
 ---
 
 ## Lesson 1 - Topic

@@ -53,59 +53,45 @@ description: Topics and Lessons for Unit 1 on Fundamentals
 - **Lab**: [Combining Data Types](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/blob/main/day_06/student_labs/2_combining_datatypes_lab.md)
 - **Homework**: [Javascript Potpurri (Deliverable)](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/tree/main/day_06/homework)
 
-## Lesson 7 - Topic
+## Lesson 7 - Callbacks
 
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
+- **Lecture**: [Callbacks](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/blob/main/day_07/instructor_notes/1.%20Callbacks.md)
+- **Lecture**: [TIPS](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/blob/main/day_07/instructor_notes/3.%20TIPS.md)
+- **Lab**: [Callbacks Lab](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/blob/main/day_07/student_labs/1_callbacks_lab.md)
+- **Homework**: [Callback Homework (Deliverable)](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/tree/main/day_07/homework)
 
-## Lesson 8 - Topic
+## Lesson 8 - Array Callback Methods
 
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
+- **Lecture**: [Array Methods](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/blob/main/day_07/instructor_notes/2.%20array_methods_w_callbacks%20(optional).md)
+- **Lab**: [Array Methods Lab](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/blob/main/day_07/student_labs/2_array_methods_callbacks_lab.md)
+- **Homework**: [Callbacks, Array Methods and Combining Datatypes Homework (non-deliverable)](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/tree/main/day_07/homework)
 
-## Lesson 9 - Topic
+## Lesson 9 - Plain Vanilla JS DOM
 
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
+- **Lecture**: [Intro to the DOM](https://git.generalassemb.ly/AlexMerced/Intro_To_DOM_Lessons/blob/master/introtodom.md)
+- **Lab**: [Plain Vanilla DOM Lab](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/blob/main/day_08/student_labs/morning_lab.md)
 
-## Lesson 10 - Topic
+## Lesson 10 - DOM with jQuery
 
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
+- **Lecture**: [Intro to JQuery](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/blob/main/day_08/instructor_notes/intro_to_jQuery.md)
+- **Lab**: [Creating a Website with jQuery](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/blob/main/day_08/student_labs/afternoon_lab.md)
+- **Lab**: [DOM Calculator Lab](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/blob/main/day_10/student_labs/Morning.md)
+- **Homework**: [jQuery Magic & Flowbox Mockup(Deliverable)](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/tree/main/day_08/homework)
 
-## Lesson 11 - Topic
+## Lesson 11 - AJAX
 
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
+- **Lecture**: [Using AJAX](https://git.generalassemb.ly/AlexMerced/Intro_To_DOM_Lessons/blob/master/ajax.md)
+- **Lecture**: [Working with JSON Files](https://git.generalassemb.ly/AlexMerced/Intro_To_DOM_Lessons/blob/master/json.md)
+- **Lab**: [AJAX Lab](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/blob/main/day_11/student_labs/ajax-lab.md)
 
-## Lesson 12 - Topic
 
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
+## Lesson 12 - Javascript OOP
 
-## Lesson 13 - Topic
+- **Exercises**: [Five Days of OOP](https://git.generalassemb.ly/SEIR-AM-RESOURCES/5daysofOOP)
 
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
 
-## Lesson 14 - Topic
-
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
-
-## Lesson 15 - Topic
-
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
+## Unit Project 1
+- [Project Markdown](https://git.generalassemb.ly/AlexMerced/lessons/blob/main/projects/project1.md)
 
 ## Further reading
 
