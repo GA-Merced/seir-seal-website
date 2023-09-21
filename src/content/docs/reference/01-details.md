@@ -192,7 +192,7 @@ Let's all agree to:
 * Communication is key! Please respond in a "reasonable" timely manner if we contact you via slack or email.
 * No distractions during class. This means no cell phones (talking/texting), television, or children around.
 * Make sure to speak up and speak out about any problems you are having! Don't be afraid to ask questions during class! Someone else is probably having this same issue!
-* Carve out at least 15-20 hours outside a class a week for review and homework. Expect the next 3 or so months to be out of the norm for you. If you have to carve out a personal hour during a family vacation, you will have to do this!
+* Carve out at least 1-1.5 hours outside a class a for every 3 in class for review and homework. Expect the your schedule during the course to be out of the norm for you. If you have to carve out a personal hour during a family vacation, you will have to do this!
 * Make use of office hours! Find a time that works for you and don't cancel on your instructors :)
 * Hold yourself accountable. Don't let yourself fall behind!
 
