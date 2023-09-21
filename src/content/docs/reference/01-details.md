@@ -22,29 +22,19 @@ You will be required to meet 80% completion of homework assignments at the end o
 
 ## Schedule and Holidays (Eastern Time)
 
-- Start date: **9/20/2022**
-- End date: **4/04/2022**
+- Start date: **10/31/2023**
+- End date: **5/04/2024**
 - Tuesday & Wedesday: **6:30pm-10:45pm**
 - Saturday: **10am-6pm**
-- Holidays:  11/12, 11/23, 11/24, 11/26, 12/24, 12/27-12/31, 1/14, 2/18
+- Holidays:   11-11, 11-22, 11-23, 11-25, 12-26, 12-27, 12-28-12-30, 2024-01-13, 2024-02-17
 
 ## Office Hours/Open QA Hours:
 
-| Day of Week | Time | Head of Session |
-| Sunday | N/A | N/A |
-| Monday | N/A | N/A |
-| Tuesday | 10:00pm - 10:45pm | That Night's Instructor |
-| Wednesday | 10:00pm - 10:45pm | That Night's Instructor |
-| Thursday | N/A | N/A |
-| Friday | N/A | N/A |
-| Saturday | 5:00pm - 6:00pm | That Day's Instructor |
-
+Office Hours will be Pinned in Help Channel
 
 <br>
 <br>
 <br>
-
-
 
 ## In Class
 * Before class:
@@ -63,36 +53,12 @@ You will be required to meet 80% completion of homework assignments at the end o
 | Name  | Role |
 | ----- | ----- |
 | Alex Merced  |  Lead Instructor 
-| David Yim |  Lead Instructor 
-| Billie Heidelberg |  Lead Instructor 
-| Max Walker | Instructional Associate 
-| Hisham Raihan | Instructional Associate 
-| Kyle Canamar | Instructional Associate  
-| Meshia Reed | Teachers Assistant
-| August McConnell | Teachers Assistant
-| Amber Alhussaini | Outcomes Coach
-| Anthony Hubbard | Outcomes Coach
+| Kyle Canamar | Senior Instructional Associate  
+
 
 <br>
 <br>
 <br>
-
-## Office Hours
-
-- **August McConnel**: office hours are M/F 7pm-10pm EST and Th 8:30pm - 10:30pm EST. [Office Hours Calendar](https://calendly.com/a-mcconnell-dev/office-hours-help?month=2022-09)
-
-- **Meshia Reed**: Sunday 3:00PM - 5:30pm EST and Monday 5:30pm - 8:00pm EST. [Office Hours Calendar](https://calendly.com/meshia-reed/ta-office-hour-25-min)
-
-- **Billie Heidelberg**: Mondays & Fridays 3:30-4:30PM EST
-
-- **Kyle Canamar**: Sundays 7-9pm EST
-
-- **Last Hour of Each Class**: Tuesday/Wednesday 10-10:45 and Saturdays 5-6pm
-
-<br>
-<br>
-<br>
-
 
 ## Communication
 
@@ -102,37 +68,16 @@ You will be required to meet 80% completion of homework assignments at the end o
 
 #### Post to help slack channel if:
 
-**MAKE SURE TO READ PINNED POST IN HELP CHANNEL**
+- Need Help on Assignment or Project
+  - Post in help channel or attend office hours
 
-- Need help on lab or assignments
-- Have questions about the material
+- Need talk about absence or being late to class
+  - group message to IA's
 
-
-##### Send us a message if:
-* You know in advance that you will be missing a class or multiple classes
-* You're sick, overloaded at work, or something comes up and you can't make it to class last minute
-* You will be 5 or more minutes late to class
-* You need to leave early
-* You will be submitting your homework late
-* We will get back to you within 12hrs on weekdays! On weekends, expect responses by Monday morning!
-* You are having trouble completing your assignments due non-material reasons
-* You're struggling with the material and need advice/resources
-* You'd like some bonus tasks
-
-**Remember we are here to help you! Please reach out with any questions**
-
-<br>
-<br>
-<br>
-
-
-
-## Course Overview
-Learn to code in JavaScript, the native language of the web used by developers the world over.
-
-Build a single-page web app that persists user data and connects to services like Twitter and Facebook via APIs.
-
-Learn the fundamentals of object-oriented programming while receiving support from industry experts and a community of peers.
+- Need to discuss a personal matter or career advice
+  - group message or personal DM to team members you are comfortable discussing with
+- discuss class payment, rescheduling or dropping class, or special needs
+  - contact the student experience specialist assigned to the cohort
 
 <br>
 <br>
@@ -144,19 +89,18 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 
 <br>
 
-### We will walk through this together the first time!
+- Homework submission is done via homework submission for which will be bookmarked in the classroom and homework slack channels
 
-* Depending on the assignment, your homework will be completed on [repl.it](https://repl.it/), [CodeSandbox](https://codesandbox.io/), or [GitHub](https://github.com/)
-* Fill out this [Google Form](https://www.google.com) with a link for that specific homework. It will be the same Google Form for each homework
-* **Homework is due one week from the day it was assigned**
-* If homework is marked `incomplete`, you may be asked to re-submit it; a new timeline will be discussed how long you have to re-submit the homework
+- Project submission is done via project live project presentation and spreadsheet bookmarked in classroom and homework slack channels
 
 <br>
 <br>
 
 ### Homework/Project Assignments & Due Dates
 
-Will be posted in the homework slack channel
+Homework assignments are due one week from when they are assigned by end of day. Late submissions are not accepted but resubmissions may be allowed on a case by case basis if a submission is made on time.
+
+Assignments and due dates will be listed in the homework slack channel.
 
 <br>
 <br>
@@ -174,20 +118,6 @@ will be posted in the recordings slack channel
 <br>
 <br>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wGSg8CybMG8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-<br>
-<br>
-<br>
-
-
-## Managing your Projects
-* At the end of each unit, you will create a repo in your personal github.com (not GA's github enterprise) for your project... i.e. Unit One - Project One, Unit Two - Project Two ...etc
-* Pushing your labs/homework to your personal github is not recommended
-
-<br>
-<br>
 
 ## What We Expect From You
 
@@ -271,7 +201,3 @@ Let's all agree to:
 
 ## Group Work Formats
 We will be using breakout rooms to get more personalized learning environments. Make sure to get to know your classmates and use each other as teachers!
-
-## Further reading
-
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
