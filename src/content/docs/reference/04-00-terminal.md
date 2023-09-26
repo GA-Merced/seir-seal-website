@@ -167,6 +167,92 @@ Understanding the difference between relative and absolute paths is crucial for 
 | `sftp`    | Transfer files over SFTP protocol.            | `sftp username@hostname`      |
 | `rsync`   | Synchronize files and directories.            | `rsync -av source/ destination/` |
 
-## Further reading
+## Terminal Text Editors (Nano/VIM)
+
+Terminal text editors are command-line tools that allow you to create, edit, and manipulate text files directly from a terminal or shell. They are useful for a wide range of tasks, from writing code to editing configuration files. Two popular terminal text editors are Vim and Nano. Here's an overview of how to use them:
+
+### Vim
+#### Opening Vim:
+To open a file in Vim, use the vim command followed by the filename:
+
+```shell
+vim filename.txt
+```
+
+#### Modes:
+Vim has different modes for navigation and editing:
+
+- **Normal mode:** Used for navigation and issuing commands.
+- **Insert mode:** Used for editing and typing text.
+- **Visual mode:** Used for selecting text.
+Basic Navigation:
+
+- **h, j, k, l:** Move left, down, up, or right respectively.
+- **w, b:** Move forward or backward by word.
+- **0, $:** Move to the beginning or end of the line.
+- **gg, G:** Move to the beginning or end of the file.
+
+#### Basic Editing:
+
+- **i:** Enter insert mode before the cursor.
+- **a:** Enter insert mode after the cursor.
+- **o, O:** Open a new line below or above the current line.
+- **x:** Delete the character under the cursor.
+- **dd:** Delete the current line.
+- **yy:** Copy the current line.
+- **p:** Paste copied or cut text after the cursor.
+
+#### Saving and Quitting:
+
+- **:w:** Save changes.
+- **:q:** Quit Vim.
+- **:wq or :x:** Save and quit.
+- **:q!:** Quit without saving.
+
+#### Search and Replace:
+
+- **/search-term:** Search for a term (use n for next occurrence).
+- **:s/search-term/replacement:** Replace a term with another.
+- **:%s/search-term/replacement/g:** Replace all occurrences in the file.
+#### Visual Mode:
+
+- **v:** Enter visual mode to select text.
+- **V:** Enter visual line mode to select entire lines.
+Selected text can be copied, cut, or replaced.
+
+#### Customization:
+Vim is highly customizable. You can configure it by editing the ~/.vimrc file.
+
+### Nano
+Opening Nano:
+To open a file in Nano, use the nano command followed by the filename:
+
+```shell
+nano filename.txt
+```
+
+#### Basic Navigation:
+
+- **Arrow keys:** Navigate within the text.
+- **Ctrl + F, Ctrl + B:** Scroll forward and backward.
+- **Ctrl + U, Ctrl + D:** Page up and down.
+- **Ctrl + A, Ctrl + E:** Move to the beginning and end of the line.
+
+Basic Editing:
+
+- Type to insert or edit text.
+- **Ctrl + O:** Save changes.
+- **Ctrl + X:** Exit Nano.
+
+Search and Replace:
+
+- **Ctrl + W:** Search for a term.
+- **Ctrl + \:** Replace a term.
+- **Ctrl + T:** Open the search and replace menu.
+#### Customization:
+Nano is relatively simple compared to Vim but can be customized by editing the ~/.nanorc file.
+
+Both Vim and Nano have many more features and commands to explore. Choosing between them often comes down to personal preference and the complexity of your text editing tasks. Vim is known for its steep learning curve but offers powerful text manipulation capabilities, while Nano is more straightforward and beginner-friendly.
+
 
 
