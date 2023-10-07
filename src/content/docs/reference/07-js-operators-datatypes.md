@@ -123,6 +123,3 @@ console.log(status); // "Adult"
 
 JavaScript is a dynamically typed language, which means that variables can change their data type during runtime. Understanding these operators and data types is essential for writing JavaScript code that performs various tasks and operations.
 
-## Further reading
-
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework

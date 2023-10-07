@@ -125,8 +125,3 @@ description: Useful Python tricks reference
 | Retrieve the last `n` elements from a list | `last_n_elements = my_list[-n:]` | `last_n_elements = [1, 2, 3, 4, 5][-3:]` -> `[3, 4, 5]` |
 
 
-
-
-## Further reading
-
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework

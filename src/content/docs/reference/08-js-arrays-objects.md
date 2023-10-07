@@ -202,6 +202,3 @@ The rest operator can be used to collect remaining properties when destructuring
 
 JavaScript objects are fundamental to structuring and organizing data in your code. Understanding how to work with objects, define methods, destructure them, and use spread/rest operators provides you with powerful tools for building complex applications.
 
-## Further reading
-
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework

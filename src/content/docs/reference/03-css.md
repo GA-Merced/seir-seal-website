@@ -443,6 +443,3 @@ Be aware that CSS animations are supported in modern browsers. To ensure compati
 CSS animations are a powerful tool for enhancing the user experience and adding engaging visual effects to your web projects. Experiment with different animations to create stunning web designs.
 
 
-## More Resources
-
-- [MDN Documentation on CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)

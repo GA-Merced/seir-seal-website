@@ -249,6 +249,7 @@ Search and Replace:
 - **Ctrl + W:** Search for a term.
 - **Ctrl + \:** Replace a term.
 - **Ctrl + T:** Open the search and replace menu.
+
 #### Customization:
 Nano is relatively simple compared to Vim but can be customized by editing the ~/.nanorc file.
 

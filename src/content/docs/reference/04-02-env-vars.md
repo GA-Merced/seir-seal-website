@@ -60,3 +60,99 @@ Environment variables are versatile and widely used in various contexts, from sy
 | Lua            | `os.getenv("VAR_NAME")`              | N/A                         |
 | Kotlin         | `System.getenv("VAR_NAME")`          | N/A                         |
 | TypeScript     | `process.env.VAR_NAME`               | `dotenv`                    |
+
+## Commonly Used Environmental Variables
+
+Here is a list of commonly used variables and whether they are typically defined by the operating system or the developer.
+
+| Variable Name       | Description                                            | Provided By   |
+|---------------------|--------------------------------------------------------|---------------|
+| `PATH`              | Specifies the directories where executable programs are located | OS |
+| `HOME`              | Specifies the user's home directory                           | OS |
+| `USER`              | Specifies the username of the current user                  | OS |
+| `LOGNAME`           | Specifies the login name of the current user                 | OS |
+| `TEMP` or `TMPDIR`   | Specifies a temporary directory for storing temporary files | OS |
+| `PWD`               | Specifies the current working directory                      | OS |
+| `LANG` or `LANGUAGE`| Specifies the current language and locale settings           | OS |
+| `LD_LIBRARY_PATH`   | Specifies the directories where shared libraries are located | OS/Programmer |
+| `JAVA_HOME`         | Specifies the location of the installed Java SDK             | Programmer |
+| `PYTHONPATH`        | Specifies additional directories to search for Python modules | Programmer |
+| `CLASSPATH`         | Specifies the location of Java class files                   | Programmer |
+| `DB_URL`            | Specifies the URL of a database server                       | Programmer |
+| `API_KEY`           | Specifies an API key for accessing external services        | Programmer |
+| `SHELL`              | Specifies the path to the user's preferred shell           | OS            |
+| `EDITOR`             | Specifies the user's preferred text editor                 | OS/Programmer |
+| `MAIL`               | Specifies the location of the user's mailbox               | OS            |
+| `DISPLAY`            | Specifies the X Window System display server               | OS            |
+| `TZ`                 | Specifies the timezone of the system                        | OS            |
+| `TERM`               | Specifies the type of terminal                             | OS            |
+| `HTTP_PROXY`         | Specifies the HTTP proxy server                            | Programmer    |
+| `HTTPS_PROXY`        | Specifies the HTTPS proxy server                           | Programmer    |
+| `NO_PROXY`           | Specifies the domains that should bypass the proxy server  | Programmer    |
+| `HOSTNAME`           | Specifies the hostname of the system                       | OS            |
+| `PORT`               | Specifies the port number for a network service            | Programmer    |
+| `DEBUG`              | Specifies whether to run the application in debug mode     | Programmer    |
+| `CONFIG_PATH`        | Specifies the path to a configuration file                  | Programmer    |
+| `NODE_ENV`           | Specifies the environment in which a Node.js app is running| Programmer    |
+| `DATABASE_URL`       | Specifies the URL of a database server                     | Programmer    |
+| `SECRET_KEY`         | Specifies a secret key for encrypting data                 | Programmer    |
+| `AWS_ACCESS_KEY_ID`  | Specifies the AWS access key ID                            | Programmer    |
+| `AWS_SECRET_ACCESS_KEY` | Specifies the AWS secret access key                     | Programmer    |
+| `REDIS_URL`          | Specifies the URL of a Redis server                        | Programmer    |
+| `RACK_ENV`           | Specifies the environment in which a Ruby app is running   | Programmer    |
+| `MONGO_URL`          | Specifies the URL of a MongoDB server                      | Programmer    |
+| `GOPATH`             | Specifies the workspace directory for Go projects          | Programmer    |
+| `ANDROID_HOME`       | Specifies the location of the Android SDK                  | Programmer    |
+| `SDKROOT`            | Specifies the root directory of the SDK being used         | Programmer    |
+| `PGDATA`             | Specifies the location of the PostgreSQL data directory    | Programmer    |
+| `NPM_CONFIG_PREFIX`      | Prefix configuration where npm will find/keep packages  | Programmer    |
+| `NVM_DIR`                | NVM (Node Version Manager) directory path                | Programmer    |
+| `RBENV_ROOT`             | Directory path for rbenv (Ruby Version Manager)          | Programmer    |
+| `RUBYOPT`                | Specifies additional options to Ruby interpreter         | Programmer    |
+| `BUNDLE_PATH`            | Path where Bundler installs your gems                    | Programmer    |
+| `RAILS_ENV`              | Specifies the environment in which Rails app is running | Programmer    |
+| `GEM_HOME`               | The directory where gems are installed                   | Programmer    |
+| `GEM_PATH`               | Path where RubyGems looks for gems                       | Programmer    |
+| `RUSTUP_HOME`            | Directory path for rustup (Rust toolchain installer)     | Programmer    |
+| `CARGO_HOME`             | Directory path for Cargo, Rust's package manager         | Programmer    |
+| `LOCALAPPDATA`           | Path to the local app data directory on Windows          | OS            |
+| `APPDATA`                | Path to the roaming app data directory on Windows        | OS            |
+| `CommonProgramFiles`     | Path to the common program files directory on Windows    | OS            |
+| `ProgramFiles`           | Path to the program files directory on Windows           | OS            |
+| `SystemRoot`             | Path to the Windows system root directory                | OS            |
+| `GOPROXY`                | URL of a Go module proxy                                 | Programmer    |
+| `GRADLE_HOME`            | Specifies the location of the installed Gradle           | Programmer    |
+| `KUBECONFIG`             | Path to a kubeconfig file for access to Kubernetes       | Programmer    |
+| `DOCKER_HOST`            | Specifies the hostname or IP address of the Docker daemon| Programmer    |
+| `DOCKER_CERT_PATH`       | Path to directory with Docker TLS certificates           | Programmer    |
+| `DOCKER_TLS_VERIFY`      | Enable or Disable TLS verification for Docker            | Programmer    |
+| `COMPOSE_PROJECT_NAME`   | Specifies a project name for Docker Compose              | Programmer    |
+| `VIRTUAL_ENV`            | Specifies the path to a Python virtual environment       | Programmer    |
+| `FLASK_ENV`              | Specifies the environment in which Flask app is running  | Programmer    |
+| `FLASK_APP`              | Specifies the name of the Flask application              | Programmer    |
+| `COMPOSER_HOME`          | Directory path for Composer, the PHP dependency manager       | Programmer    |
+| `COMPOSER_VENDOR_DIR`    | Directory path for Composer's vendor directory                | Programmer    |
+| `ANT_HOME`               | Specifies the location of the installed Apache Ant            | Programmer    |
+| `MAVEN_HOME`             | Specifies the location of the installed Apache Maven          | Programmer    |
+| `TOMCAT_HOME`            | Specifies the location of the installed Apache Tomcat         | Programmer    |
+| `SPRING_PROFILES_ACTIVE` | Specifies active profiles for a Spring application            | Programmer    |
+| `KAFKA_HOME`             | Specifies the location of the installed Apache Kafka          | Programmer    |
+| `ZOOKEEPER_HOME`         | Specifies the location of the installed Apache ZooKeeper      | Programmer    |
+| `HADOOP_HOME`            | Specifies the location of the installed Apache Hadoop         | Programmer    |
+| `HADOOP_CONF_DIR`        | Specifies the directory of Hadoop configuration files         | Programmer    |
+| `SPARK_HOME`             | Specifies the location of the installed Apache Spark          | Programmer    |
+| `PYSPARK_PYTHON`         | Specifies the Python binary executable for PySpark            | Programmer    |
+| `PYSPARK_DRIVER_PYTHON`  | Specifies the Python binary executable for the PySpark driver | Programmer    |
+| `CASSANDRA_HOME`         | Specifies the location of the installed Apache Cassandra      | Programmer    |
+| `MYSQL_HOME`             | Specifies the location of the installed MySQL server          | Programmer    |
+| `PGHOST`                 | Specifies the host name of the PostgreSQL server              | Programmer    |
+| `PGPORT`                 | Specifies the port number of the PostgreSQL server            | Programmer    |
+| `PGUSER`                 | Specifies the username for the PostgreSQL server              | Programmer    |
+| `PGPASSWORD`             | Specifies the password for the PostgreSQL server              | Programmer    |
+| `ANDROID_SDK_ROOT`       | Specifies the location of the Android SDK                    | Programmer    |
+| `GOBIN`                  | Specifies the directory where Go binaries are installed       | Programmer    |
+| `JRE_HOME`               | Specifies the location of the installed Java Runtime Environment | Programmer |
+| `JDK_HOME`               | Specifies the location of the installed Java Development Kit  | Programmer    |
+| `SCALA_HOME`             | Specifies the location of the installed Scala                | Programmer    |
+| `PERL5LIB`               | Specifies additional directories to search for Perl libraries| Programmer    |
+| `R_LIBS`                 | Specifies additional directories to search for R libraries    | Programmer    |

@@ -1,5 +1,5 @@
 ---
-title: SQL & PostgresDB
+title: PostgresDB
 description: Useful Python tricks reference
 ---
 

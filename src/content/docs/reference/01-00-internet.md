@@ -9,13 +9,11 @@ TCP/IP, which stands for Transmission Control Protocol/Internet Protocol, is a f
 
 ## 1. What is TCP/IP:
 
-
 - **Transmission Control Protocol (TCP):** TCP is one of the two main protocols in TCP/IP. It is responsible for ensuring that data sent over a network reaches its destination accurately and reliably. TCP breaks data into packets, adds sequencing information, manages acknowledgments, and retransmits data if any packets are lost or corrupted. This reliability is crucial for applications like web browsing, email, and file transfer.
 
 - **Internet Protocol (IP):** IP is the other key protocol in TCP/IP. It deals with the routing of data packets across networks, including the global Internet. IP assigns unique addresses to devices on a network, allowing routers to forward packets to the correct destination. IPv4 (Internet Protocol version 4) and IPv6 (Internet Protocol version 6) are two versions of IP, with IPv6 addressing the limitations of IPv4 and providing a larger address space.
 
 ## 2. How TCP/IP Works:
-
 
 - **Packetization:** When data is sent over a network, it is divided into smaller packets. These packets contain the data, as well as control information like source and destination addresses, sequence numbers, and checksums.
 
@@ -26,7 +24,6 @@ TCP/IP, which stands for Transmission Control Protocol/Internet Protocol, is a f
 - **Acknowledgments:** TCP/IP uses acknowledgments to confirm that data has been received successfully. If a packet is not acknowledged within a certain time frame, TCP will retransmit it to ensure delivery.
 
 ## 3. How TCP/IP Enables the Internet:
-
 
 - **Interoperability:** TCP/IP is an open and standardized protocol suite, making it possible for different devices and networks to communicate seamlessly. This interoperability is essential for the global reach of the Internet, as it connects various types of devices, operating systems, and networks.
 
@@ -218,7 +215,7 @@ A relative URL specifies the location of a resource in relation to the current d
 - `images/pic.jpg` (Resource in the same directory)
 - `../docs/document.pdf` (Resource in the parent directory)
 - `/index.html` (Resource at the root of the website)
-When to Use Each:
+  When to Use Each:
 
 **Absolute URLs:** Use absolute URLs when referencing external resources or when you need to ensure that a specific resource is accessed. They are essential for cross-domain linking.
 

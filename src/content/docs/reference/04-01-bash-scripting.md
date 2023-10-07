@@ -127,3 +127,79 @@ echo "Second argument: $2"
 
 ### Scripting is Powerful
 Bash scripting is a versatile tool for automating tasks, managing files, and performing system administration on Unix-based systems. With the basics covered here, you can start writing your own Bash scripts to simplify and automate your workflow.
+
+## Useful Functions for Devs
+
+Below are some bash functions tailored for software developers. These functions can be added to your bash profile (e.g., ~/.bashrc or ~/.bash_profile) so they'll be available whenever you start a new terminal session.
+
+### Committing and Pushing Code to GitHub:
+```bash
+function git_push() {
+    local message="$1"
+    if [[ -z "$message" ]]; then
+        echo "Commit message is required."
+        return 1
+    fi
+    git add .
+    git commit -m "$message"
+    git push
+}
+```
+Usage: `git_push "Your commit message"``
+
+### Scaffolding a New Express.js Project:
+```bash
+function create_express_project() {
+    local project_name="$1"
+    if [[ -z "$project_name" ]]; then
+        echo "Project name is required."
+        return 1
+    fi
+    npx express-generator "$project_name"
+    cd "$project_name" && npm install
+}
+```
+
+Usage: `create_express_project your_project_name`
+
+### Scaffolding a New Python Project:
+```bash
+function create_python_project() {
+    local project_name="$1"
+    if [[ -z "$project_name" ]]; then
+        echo "Project name is required."
+        return 1
+    fi
+    mkdir "$project_name"
+    cd "$project_name"
+    python -m venv venv
+    source venv/bin/activate
+    touch main.py
+}
+```
+
+Usage: `create_python_project your_project_name`
+
+### Scaffolding a New Ruby Project:
+```bash
+function create_ruby_project() {
+    local project_name="$1"
+    if [[ -z "$project_name" ]]; then
+        echo "Project name is required."
+        return 1
+    fi
+    mkdir "$project_name"
+    cd "$project_name"
+    echo "source 'https://rubygems.org'" > Gemfile
+    bundle install
+    touch main.rb
+}
+```
+
+Usage: `create_ruby_project your_project_name`
+
+These functions streamline some common tasks in a developer's workflow. For the git_push function, it's a basic example, and you might want to extend or modify it according to your workflow, such as handling different branches, remotes, or even adding error checking before proceeding to each step.
+
+For scaffolding functions, these are very basic and can be greatly expanded upon to suit your needs or your team's project structure conventions. They serve as a starting point and can save a lot of time when starting new projects.
+
+Remember to source your bash profile after adding these functions to it, by running source ~/.bashrc or source ~/.bash_profile, or by opening a new terminal session.

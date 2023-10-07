@@ -568,6 +568,3 @@ Render EJS views in your route handlers using res.render() and pass data as need
 
 EJS provides a flexible and straightforward way to generate dynamic HTML content in Express.js applications, making it a popular choice for many web developers.
 
-## Further reading
-
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework

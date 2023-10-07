@@ -127,7 +127,3 @@ function myFunction() {
   let localVar = "I'm local"; // Local scope
 }
 ```
-
-## Further reading
-
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework

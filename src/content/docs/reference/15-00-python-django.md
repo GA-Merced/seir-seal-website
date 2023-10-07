@@ -352,9 +352,3 @@ python manage.py runserver
 Your Django Rest Framework-powered API should now be accessible at the defined endpoints, allowing you to create, retrieve, update, and delete data using RESTful conventions.
 
 
-
-
-
-## Further reading
-
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework

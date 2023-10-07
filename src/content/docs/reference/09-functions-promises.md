@@ -231,6 +231,3 @@ fetchData();
 ```
 Promises provide a structured way to work with asynchronous code, making it easier to manage complex tasks and handle errors gracefully. You can choose between using .then for chaining or async/await for more concise and readable asynchronous code, depending on your preference and project requirements.
 
-## Further reading
-
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework

@@ -187,3 +187,413 @@ The event object has various properties that provide valuable information about 
 - **event.altKey, event.ctrlKey, event.shiftKey:** These properties are Boolean values that indicate whether the Alt, Ctrl, or Shift key was pressed when the event occurred. They are often used to check for modifier keys during keyboard events.
 
 These are just some of the commonly used properties and methods of the event object in JavaScript. Depending on the type of event and your specific use case, you may find other properties and methods that provide additional information and control over event handling. Understanding the event object and its properties is fundamental to effective event-driven programming in JavaScript.
+
+# LocalStorage/SessionStorage
+
+Web browsers provide mechanisms for websites to store and retrieve data on a client's computer, enhancing the overall user experience. Two of these storage mechanisms are Local Storage and Session Storage, which are part of the Web Storage API. Although they serve similar purposes, they have different lifetimes and scopes.
+
+## Local Storage:
+Local Storage allows you to store data for the duration of the user's browser. It persists even after the browser is closed and reopened. Each key/value pair is stored as a string and can be retrieved as a string.
+
+Usage:
+```js
+// Setting an item in Local Storage
+localStorage.setItem('username', 'JohnDoe');
+
+// Getting an item from Local Storage
+let username = localStorage.getItem('username');
+
+// Removing an item from Local Storage
+localStorage.removeItem('username');
+
+// Clearing all items from Local Storage
+localStorage.clear();
+```
+### Advantages:
+- Persists across browser sessions and even system reboots.
+- Provides a simple key-value store for data.
+- Supports up to 5MB of data per domain.
+### Disadvantages:
+- Not recommended for storing sensitive information as it's accessible via client-side scripts.
+- The storage limit can be a constraint for large amounts of data.
+
+## Session Storage:
+Session Storage is similar to Local Storage but has a shorter lifetime. It's designed to store data for the duration of the page session. A page session lasts as long as the browser is open, and survives over page reloads and restores. However, opening a page in a new tab or window will cause a new session to be initiated.
+
+Usage:
+```javascript
+// Setting an item in Session Storage
+sessionStorage.setItem('session_id', 'abc123');
+
+// Getting an item from Session Storage
+let sessionId = sessionStorage.getItem('session_id');
+
+// Removing an item from Session Storage
+sessionStorage.removeItem('session_id');
+
+// Clearing all items from Session Storage
+sessionStorage.clear();
+
+```
+### Advantages:
+- Useful for storing temporary data like form inputs.
+- Also provides a simple key-value store for data.
+- Supports up to 5MB of data per domain.
+### Disadvantages:
+- Data does not persist when the browser is closed or the page session ends.
+- Like Local Storage, it's not suitable for storing sensitive information.
+
+## LocalStorage CRUD Example
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+    <input type="text" id="todoInput" placeholder="Enter a task">
+    <button onclick="addTodo()">Add</button>
+    <ul id="todoList"></ul>
+    <script src="app.js"></script>
+</body>
+</html>
+```
+
+```javascript
+function getTodos() {
+    let todos = localStorage.getItem('todos');
+    return todos ? JSON.parse(todos) : [];
+}
+
+function saveTodos(todos) {
+    localStorage.setItem('todos', JSON.stringify(todos));
+}
+
+function renderTodos() {
+    let todos = getTodos();
+    let html = '';
+    todos.forEach((todo, index) => {
+        html += `
+            <li>
+                ${todo.text}
+                <button onclick="deleteTodo(${index})">Delete</button>
+                <button onclick="editTodoPrompt(${index})">Edit</button>
+            </li>
+        `;
+    });
+    document.getElementById('todoList').innerHTML = html;
+}
+
+function addTodo() {
+    let todoText = document.getElementById('todoInput').value;
+    if (todoText.trim() === '') return;  // Prevent empty todos
+    let todos = getTodos();
+    todos.push({ text: todoText });
+    saveTodos(todos);
+    document.getElementById('todoInput').value = '';
+    renderTodos();
+}
+
+function deleteTodo(index) {
+    let todos = getTodos();
+    todos.splice(index, 1);
+    saveTodos(todos);
+    renderTodos();
+}
+
+function editTodoPrompt(index) {
+    let todos = getTodos();
+    let newTodoText = prompt('Edit your todo:', todos[index].text);
+    if (newTodoText !== null && newTodoText.trim() !== '') {
+        editTodo(index, newTodoText);
+    }
+}
+
+function editTodo(index, newTodoText) {
+    let todos = getTodos();
+    todos[index].text = newTodoText;
+    saveTodos(todos);
+    renderTodos();
+}
+
+// Initial render
+renderTodos();
+```
+
+### Explanation:
+#### Storing and Retrieving Todos:
+
+1. getTodos and saveTodos functions are utilities for getting and saving the todo list to/from Local Storage.
+
+#### Rendering Todos (Read):
+
+1. renderTodos function reads the todo list from Local Storage and renders it to the DOM.
+
+#### Adding a Todo (Create):
+
+1. addTodo function gets the todo text from the input field, adds a new todo to the list, saves it to Local Storage, clears the input field, and re-renders the todo list.
+
+#### Deleting a Todo (Delete):
+
+1. deleteTodo function takes an index, removes the corresponding todo from the list, saves it to Local Storage, and re-renders the todo list.
+
+#### Editing a Todo (Update):
+
+1. editTodoPrompt function prompts the user for a new todo text, and if provided, calls editTodo to update the todo.
+1. editTodo function updates the corresponding todo, saves it to Local Storage, and re-renders the todo list.
+
+#### Initial Render:
+
+1. The renderTodos function is called when the script loads to display any existing todos.
+1. This example demonstrates a simple but complete CRUD interaction with a to-do list using Local Storage and Vanilla JavaScript.
+
+# IndexDB
+
+IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs. It lets you create, read, navigate, and write user-generated content or assets to the user's browser. It is a powerful, albeit complex, solution for client-side storage, providing more advanced features compared to Local Storage and Session Storage.
+
+## Understanding IndexedDB:
+IndexedDB is a transactional database system, like an SQL-based RDBMS. However, unlike SQL, IndexedDB is a NoSQL database system, which stores data in "object stores" resembling tables. Each object store can hold multiple JavaScript objects identified by a unique key.
+
+## Key Features:
+- Indexed Data: You can create indexes on object properties allowing efficient searching, even within large datasets.
+- Transactional Database: IndexedDB supports transactions ensuring data integrity even when multiple operations are performed.
+- Key-Value Storage: Data is stored as key-value pairs, where keys are unique identifiers for easy retrieval.
+- Large Amounts of Data: It is suitable for applications needing to handle a considerable amount of data on the client-side.
+- Asynchronous API: Operations in IndexedDB are asynchronous, ensuring UI responsiveness.
+
+## Usage:
+Here's a simplified example of how to create an IndexedDB database, object store, and add an object to it:
+
+```javascript
+// Open a database connection
+let request = indexedDB.open('MyDatabase', 1);
+
+request.onupgradeneeded = function(event) {
+    // Create object store when database version changes
+    let db = event.target.result;
+    let objectStore = db.createObjectStore('users', { keyPath: 'id' });
+};
+
+request.onsuccess = function(event) {
+    // Database opened successfully
+    let db = event.target.result;
+
+    // Create a new transaction
+    let transaction = db.transaction(['users'], 'readwrite');
+
+    // Get the object store
+    let objectStore = transaction.objectStore('users');
+
+    // Add a new user object
+    let user = { id: 1, name: 'John Doe', email: 'john.doe@example.com' };
+    objectStore.add(user);
+};
+
+request.onerror = function(event) {
+    console.log('Database error: ', event.target.errorCode);
+};
+```
+
+## Advantages:
+- Advanced Storage: IndexedDB is capable of handling more complex data arrangements compared to Local Storage and Session Storage.
+- Performance: IndexedDB performs well for large datasets and under high concurrency scenarios.
+Disadvantages:
+- Complexity: IndexedDB's API is more complex and less user-friendly compared to simpler key-value storage solutions.
+- Browser Support: While modern browsers support IndexedDB, older browser versions may not.
+
+## IndexDB CRUD Example
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+    <input type="text" id="todoInput" placeholder="Enter a task">
+    <button onclick="addTodo()">Add</button>
+    <ul id="todoList"></ul>
+    <script src="app.js"></script>
+</body>
+</html>
+```
+
+```javascript
+let db;
+
+// Open the IndexedDB connection
+let request = indexedDB.open('TodoDB', 1);
+
+request.onupgradeneeded = function(event) {
+    db = event.target.result;
+    if (!db.objectStoreNames.contains('todos')) {
+        db.createObjectStore('todos', { keyPath: 'id', autoIncrement: true });
+    }
+};
+
+request.onsuccess = function(event) {
+    db = event.target.result;
+    readTodos();
+};
+
+request.onerror = function(event) {
+    console.log('Database error:', event.target.errorCode);
+};
+
+function addTodo() {
+    let todoText = document.getElementById('todoInput').value;
+    let transaction = db.transaction(['todos'], 'readwrite');
+    let objectStore = transaction.objectStore('todos');
+    objectStore.add({ text: todoText });
+
+    transaction.oncomplete = function() {
+        document.getElementById('todoInput').value = '';
+        readTodos();
+    };
+}
+
+function readTodos() {
+    let transaction = db.transaction(['todos'], 'readonly');
+    let objectStore = transaction.objectStore('todos');
+    let request = objectStore.getAll();
+
+    request.onsuccess = function(event) {
+        renderTodos(event.target.result);
+    };
+}
+
+function renderTodos(todos) {
+    let html = '';
+    todos.forEach(todo => {
+        html += `<li>${todo.text} <button onclick="deleteTodo(${todo.id})">Delete</button></li>`;
+    });
+    document.getElementById('todoList').innerHTML = html;
+}
+
+function deleteTodo(id) {
+    let transaction = db.transaction(['todos'], 'readwrite');
+    let objectStore = transaction.objectStore('todos');
+    objectStore.delete(id);
+
+    transaction.oncomplete = function() {
+        readTodos();
+    };
+}
+```
+
+### Explanation:
+#### Database Initialization:
+
+1. indexedDB.open initializes a new or existing database. If the database doesn't exist, it creates a new one.
+1. onupgradeneeded creates an object store named todos if it doesn't already exist.
+1. onsuccess sets a global db variable to the database instance and reads the initial todos.
+1. onerror logs any database error.
+
+#### Add Todo (Create):
+
+1. addTodo function triggers on the "Add" button click, capturing the input value and creating a new transaction to add a new todo to the object store.
+1. transaction.oncomplete clears the input field and refreshes the todo list.
+
+#### Read Todos (Read):
+
+1. readTodos function creates a read transaction, fetches all todos from the object store, and calls renderTodos to display them.
+
+#### Delete Todo (Delete):
+
+1. deleteTodo function triggers on the "Delete" button click, capturing the todo ID, creating a new transaction to delete the todo from the object store.
+1. transaction.oncomplete refreshes the todo list.
+
+#### Render Todos:
+
+1. renderTodos function takes an array of todos and renders them to the DOM.
+1. This example covers the Create, Read, and Delete operations of CRUD. The Update operation would follow a similar pattern to the Add and Delete operations, requiring a transaction to update an existing record in the object store.
+
+## Conclusion:
+IndexedDB is an advanced client-side storage solution suited for developers requiring more than what Local Storage and Session Storage offer. With IndexedDB, developers can build more complex, robust, and efficient web applications, enhancing user satisfaction and engagement.
+
+
+# Example DOM Patterns
+
+## Render Lists of Objects to the DOM
+
+### 1. Vanilla JavaScript:
+```javascript
+// Define an array of objects
+let items = [
+    { id: 1, text: 'Item 1' },
+    { id: 2, text: 'Item 2' },
+    { id: 3, text: 'Item 3' }
+];
+
+// Function to render items to the DOM
+function renderItems(arr) {
+    // Get the container element where items will be appended
+    let container = document.getElementById('container');
+    // Loop through each item in the array
+    arr.forEach(item => {
+        // Create a new div element
+        let div = document.createElement('div');
+        // Set the text content of the div to the text property of the current item
+        div.textContent = item.text;
+        // Append the div to the container
+        container.appendChild(div);
+    });
+}
+
+// Call the function to render items
+renderItems(items);
+```
+```html
+<div id="container"></div>
+```
+#### Explanation:
+- An array of objects is defined with let items.
+- The renderItems function takes an array as its parameter.
+- Inside renderItems, we:
+  - Obtain a reference to the DOM element with id of container using document.getElementById.
+  - Use Array.prototype.forEach to iterate over the array.
+  - For each object in the array, create a new div element, set its text content to the text property of the current object, and append it to the container.
+
+### 2. jQuery:
+```js
+// Define an array of objects
+let items = [
+    { id: 1, text: 'Item 1' },
+    { id: 2, text: 'Item 2' },
+    { id: 3, text: 'Item 3' }
+];
+
+// Function to render items to the DOM
+function renderItems(arr) {
+    // Get the jQuery object for the container element
+    let $container = $('#container');
+    // Loop through each item in the array
+    $.each(arr, function(index, item) {
+        // Create a new div element
+        let $div = $('<div>');
+        // Set the text content of the div to the text property of the current item
+        $div.text(item.text);
+        // Append the div to the container
+        $container.append($div);
+    });
+}
+
+// Call the function to render items
+renderItems(items);
+```
+```html
+<div id="container"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+```
+#### Explanation:
+- Similar to the Vanilla JS example, we define an array of objects with let items.
+- The renderItems function takes an array as its parameter.
+- Inside renderItems, using jQuery, we:
+  - Obtain a reference to the container element using the jQuery selector $('#container').
+  - Use $.each to iterate over the array.
+  - For each object in the array, create a new div element, set its text content to the text property of the current object, and append it to the container.

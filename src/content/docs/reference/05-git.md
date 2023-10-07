@@ -89,6 +89,3 @@ If another collaborator has made changes on GitHub, you can fetch and merge thos
 
 Working with remotes allows you to collaborate effectively with others and keep your local and remote repositories in sync, ensuring a smooth and organized development process.
 
-## Further reading
-
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework

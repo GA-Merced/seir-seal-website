@@ -125,7 +125,3 @@ description: Reference of useful JS Tricks
 | Trick 100     | Convert a string to an array of characters | `const charArray = [...string];`               | `const string = 'hello'; const charArray = [...string];` |
 
 
-
-## Further reading
-
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework

@@ -367,7 +367,209 @@ Attributes: The for attribute associates the `<output>` with the input element.
 
 These HTML elements help you structure and enhance the usability of your forms. Properly using these elements not only improves the visual presentation of your forms but also enhances accessibility and user experience.
 
+# Types of Inputs
+
+## Text Input (<input type="text">):
+
+This is the most common input element.
+It allows users to enter single-line text.
+You can specify the maxlength attribute to limit the number of characters.
+Use the placeholder attribute to provide a hint to users about what to enter.
+
+```html
+<input type="text" placeholder="Enter your name" maxlength="50">
+```
+
+## Password Input (<input type="password">):
+
+Similar to text input but obscures the entered text for security.
+
+Useful for creating password fields.
+Does not display the actual characters entered; instead, it typically shows asterisks or dots.
+
+```html
+<input type="password" placeholder="Password">
+```
+
+## Email Input (<input type="email">):
+
+Intended for email addresses.
+
+Provides built-in validation to ensure valid email format.
+
+Displays a warning if the email format is incorrect.
+
+```html
+<input type="email" placeholder="Enter your email">
+```
+
+## Number Input (<input type="number">):
+
+Designed for numeric input.
+Can include up and down arrows for incrementing/decrementing the value.
+You can set the min and max attributes to define allowable value ranges.
+
+```html
+<input type="number" min="0" max="100" step="1">
+```
+
+## Checkbox (<input type="checkbox">):
+
+Represents a binary choice, such as agreeing to terms and conditions.
+
+Multiple checkboxes can be selected simultaneously.
+
+Use the checked attribute to pre-select the checkbox.
+
+```html
+<input type="checkbox" checked> I agree to the terms and conditions
+```
+
+## Radio Buttons (<input type="radio">):
+
+Allows users to select one option from a group of options.
+
+All radio buttons within the same name attribute are treated as a group, and only one can be selected.
+
+Use the checked attribute to pre-select one option.
+
+```html
+<input type="radio" name="gender" value="male" checked> Male
+<input type="radio" name="gender" value="female"> Female
+```
+
+## File Input (<input type="file">):
+
+Enables users to upload files from their device.
+
+It opens a file dialog when clicked.
+
+You can use the accept attribute to specify file types allowed for upload.
+
+```html
+<input type="file" accept=".jpg, .png">
+```
+
+## **Date and Time Inputs (<input type="date">, <input type="time">, <input type="datetime-local">):
 
 
+These inputs allow users to select dates and times.
 
+`type="date"` displays a date picker.
+`type="time"` displays a time picker.
+`type="datetime-local"` combines date and time selection.
+
+```html
+<input type="date">
+<input type="time">
+<input type="datetime-local">
+```
+
+## Hidden Input (<input type="hidden">):
+
+Not visible to users.
+
+Useful for storing values to be submitted with the form (like CSRF Tokens).
+
+```html
+<input type="hidden" name="user_id" value="123">
+```
+
+## Color Input (<input type="color">):
+
+Allows users to select colors.
+
+Opens a color picker when clicked.
+
+Returns the selected color as a hexadecimal value.
+
+```html
+<input type="color">
+```
+
+## **Range Input (<input type="range">):
+Provides a slider control that allows users to select a value within a specified range.
+You can define the range using the min, max, and step attributes.
+
+Useful for selecting values like volume, 
+
+brightness, or any continuous range.
+
+```html
+<input type="range" min="0" max="100" step="5">
+```
+
+## **Search Input (<input type="search">):
+Designed for search queries.
+May have specific styling, such as a magnifying glass icon.
+
+Some browsers provide auto-suggestions based on the search query.
+
+```html
+<input type="search" placeholder="Search...">
+```
+
+## **URL Input (<input type="url">):
+Intended for entering URLs.
+
+Provides built-in validation to ensure a valid URL format.
+
+Displays a warning if the URL format is incorrect.
+
+```html
+<input type="url" placeholder="Enter a URL">
+```
+
+## **Tel Input (<input type="tel">):
+Used for telephone numbers.
+
+Allows input of phone numbers, including international formats.
+
+May trigger the device's phone number keyboard layout.
+
+```html
+<input type="tel" placeholder="Enter your phone number">
+```
+
+## **Month and Week Inputs (<input type="month">, <input type="week">):
+
+These inputs allow users to select a specific month or week from a calendar.
+
+`type="month"` displays a month picker.
+`type="week"` displays a week picker.
+
+```html
+<input type="month">
+<input type="week">
+```
+
+## **Reset and Submit Buttons (<input type="reset">, <input type="submit">):
+These inputs are used to create reset and submit buttons within a form.
+
+`<input type="reset">` resets the form's fields to their default values.
+
+`<input type="submit">`submits the form data to the server.
+
+```js
+<input type="reset" value="Reset">
+<input type="submit" value="Submit">
+```
+
+## **Button Input (<input type="button">):
+Provides a generic button that can trigger custom JavaScript actions.
+
+It's not associated with form submission or resetting by default.
+
+```html
+<input type="button" value="Click me" onclick="myFunction()">
+```
+
+## **Image Input (<input type="image">):
+Displays an image as a clickable input element.
+When clicked, it submits the form's coordinates (x, y) where the user clicked.
+Useful for creating custom image-based buttons.
+
+```html
+<input type="image" src="button.png" alt="Submit">
+```
 
