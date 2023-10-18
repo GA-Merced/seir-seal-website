@@ -93,6 +93,3 @@ description: Cheatsheet for Terminal
 | **File Permissions**       |                              |                                        |
 | Check File Permissions     | `ls -l file.txt`              | `Get-Acl file.txt`                    |
 
-*Note: This is a basic comparison, and the actual commands can vary depending on the specific use case and system configurations.*
-
-Feel free to adapt and format this table as needed in your Markdown editor to make it more visually appealing.
