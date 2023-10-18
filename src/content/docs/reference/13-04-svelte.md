@@ -198,4 +198,4 @@ The markup section is where you define the actual HTML markup for your component
 {/each}
 ```
 
-Svelte's template syntax empowers you to create dynamic and interactive components while maintaining clarity and reactivity. By understanding and effectively using the <script>, <style>, and markup sections, you can build powerful web applications with Svelte components.
+Svelte's template syntax empowers you to create dynamic and interactive components while maintaining clarity and reactivity. By understanding and effectively using the `<script>`, `<style>`, and markup sections, you can build powerful web applications with Svelte components.

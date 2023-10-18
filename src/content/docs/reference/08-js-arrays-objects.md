@@ -202,3 +202,159 @@ The rest operator can be used to collect remaining properties when destructuring
 
 JavaScript objects are fundamental to structuring and organizing data in your code. Understanding how to work with objects, define methods, destructure them, and use spread/rest operators provides you with powerful tools for building complex applications.
 
+# Object Constructor
+## Purpose
+The Object constructor in JavaScript is a fundamental part of the language and serves as the basis for creating objects. It provides a way to create and manipulate objects, whether for defining custom data structures, representing real-world entities, or organizing data.
+
+## Constructor Syntax
+The Object constructor can be used in two ways:
+
+### Empty Object Creation:
+
+```js
+const emptyObject = new Object();
+```
+
+This creates an empty object with no properties or methods.
+
+### Literal Object Creation:
+
+```js
+const person = {
+  name: 'John',
+  age: 30,
+};
+```
+
+This creates an object using object literal notation, a more concise way of defining objects.
+
+## Helper Methods
+The Object constructor also provides various helper methods for working with objects:
+
+`Object.assign(target, ...sources)`: Copies the values of all enumerable properties from one or more source objects to a target object. It is commonly used for object merging.
+
+```js
+const target = { a: 1 };
+const source = { b: 2 };
+const result = Object.assign(target, source);
+```
+
+`Object.create(proto, propertiesObject)`: Creates a new object with the specified prototype object and optional properties.
+
+```js
+const personProto = {
+  greet() {
+    console.log('Hello!');
+  },
+};
+const person = Object.create(personProto);
+```
+
+`Object.defineProperty(obj, prop, descriptor)`: Adds a new property to an object or modifies an existing one with a given descriptor, allowing fine-grained control over property behavior.
+
+```js
+const obj = {};
+Object.defineProperty(obj, 'property', {
+  value: 42,
+  writable: true,
+  enumerable: true,
+  configurable: true,
+});
+```
+
+`Object.defineProperties(obj, props)`: Adds new properties to an object or modifies existing ones with the specified descriptors.
+
+```js
+const obj = {};
+Object.defineProperties(obj, {
+  prop1: { value: 'value1', writable: true },
+  prop2: { value: 'value2', writable: true },
+});
+```
+
+`Object.entries(obj)`: Returns an array of key-value pairs from an object's enumerable string-keyed properties.
+
+```js
+const obj = { a: 1, b: 2, c: 3 };
+const entries = Object.entries(obj);
+```
+
+`Object.keys(obj)`: Returns an array of an object's own enumerable property names.
+
+```js
+const obj = { a: 1, b: 2, c: 3 };
+const keys = Object.keys(obj);
+```
+
+`Object.values(obj)`: Returns an array of an object's own enumerable property values.
+
+```js
+const obj = { a: 1, b: 2, c: 3 };
+const values = Object.values(obj);
+```
+
+`Object.freeze(obj)`: Freezes an object, preventing new properties from being added and existing ones from being removed or modified.
+
+```js
+const obj = { a: 1, b: 2 };
+Object.freeze(obj);
+```
+
+`Object.seal(obj)`: Seals an object, preventing new properties from being added and making existing ones non-configurable.
+
+```js
+const obj = { a: 1, b: 2 };
+Object.seal(obj);
+```
+
+`Object.is(obj1, obj2)`: Determines whether two values are the same value, providing a more accurate comparison than ===.
+
+```js
+const a = [1, 2, 3];
+const b = [1, 2, 3];
+const areEqual = Object.is(a, b);
+```
+
+# Array Constructor
+## Purpose
+The Array constructor in JavaScript is used to create and manipulate arrays. Arrays are ordered collections of elements and are widely used to store and manage data.
+
+## Constructor Syntax
+You can create an array using the Array constructor with or without initial elements:
+
+### Empty Array Creation:
+
+```js
+const emptyArray = new Array();
+This creates an empty array with no elements.
+
+Array Creation with Initial Elements:
+
+```js
+const numbers = new Array(1, 2, 3);
+This creates an array with initial elements.
+```
+
+Literal Array Creation:
+
+```js
+const fruits = ['apple', 'banana', 'orange'];
+```
+
+This is the more common and concise way of creating arrays using array literal notation.
+
+## Helper Methods
+The Array constructor provides numerous helper methods for working with arrays:
+
+`Array.from(iterable, mapFn, thisArg)`: Creates a new array from an iterable object.
+
+```js
+const iterable = '12345';
+const newArray = Array.from(iterable, Number);
+```
+
+`Array.of(...elements)`: Creates a new array with the specified elements.
+
+```js
+const numbers = Array.of(1, 2, 3, 4, 5);
+```
