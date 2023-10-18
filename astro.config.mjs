@@ -19,6 +19,10 @@ export default defineConfig({
           autogenerate: { directory: "reference" },
         },
         {
+          label: "Cheatsheets",
+          autogenerate: { directory: "cheatsheets" },
+        },
+        {
           label: "Other",
           autogenerate: { directory: "other" },
         },
