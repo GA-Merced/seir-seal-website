@@ -1,64 +1,7 @@
 ---
-title: Python/Django
-description: A reference page in my new Starlight docs site.
+title: Python Backend Development
+description: A reference page on python backend development
 ---
-
-## Basics of Python:
-### 1. What Is Python?
-Python is a high-level, interpreted programming language known for its simplicity and readability. It was created by Guido van Rossum and first released in 1991. Python is widely used in various domains, including web development, data science, scientific computing, artificial intelligence, and more. It emphasizes code readability and a clean, concise syntax, making it an excellent choice for beginners and experienced developers alike.
-
-### 2. Defining Variables:
-In Python, you can define variables to store and manipulate data. Variable names are case-sensitive and should follow certain naming conventions:
-
-- Variable names can consist of letters (a-z, A-Z), digits (0-9), and underscores (_).
-- Variable names must start with a letter or an underscore.
-- Python is dynamically typed, meaning you don't need to declare a variable's data type explicitly. Python infers the data type based on the value assigned to it.
-
-#### Examples of defining variables:
-
-```py
-# Integer variable
-age = 25
-
-# String variable
-name = "Alice"
-
-# Boolean variable
-is_student = True
-
-# Floating-point variable
-price = 9.99
-```
-### 3. Data Types and Operators:
-Python supports various data types and operators for performing operations on data. Here's an overview:
-
-- a. **Numeric Data Types:**
-  - **int:** Represents integer values, e.g., 10, -5.
-  - **float:** Represents floating-point (decimal) values, e.g., 3.14, -0.5.
-  - **complex:** Represents complex numbers, e.g., 1 + 2j.
-- b. **String Data Type:**
-  - **str:** Represents text or string values, enclosed in single (') or double (") quotes, e.g., 'Hello, World!'.
-- c. **Boolean Data Type:**
-  - **bool:** Represents Boolean values, either True or False.
-- d. **Containers:**
-  - **List:** An ordered collection of elements, denoted by square brackets [], e.g., [1, 2, 3].
-  - **Tuple:** An ordered, immutable collection of elements, denoted by parentheses (), e.g., (1, 2, 3).
-  - **Dictionary:** A collection of key-value pairs, denoted by curly braces {}, e.g., {"name": "Alice", "age": 25}.
-  - **Set:** An unordered collection of unique elements, denoted by curly braces {}, e.g., {1, 2, 3}.
-- e. **Operators:**
-  - **Arithmetic Operators:** + (addition), - (subtraction), * (multiplication), / (division), % (modulo), ** (exponentiation).
-
-  - **Comparison Operators:** == (equal), != (not equal), < (less than), > (greater than), <= (less than or equal), >= (greater than or equal).
-
-  - **Logical Operators:** and (logical AND), or (logical OR), not (logical NOT).
-
-  - **Assignment Operators:** = (assignment), += (add and assign), -= (subtract and assign), *= (multiply and assign), /= (divide and assign), %= (modulo and assign), **= (exponentiate and assign).
-
-  - **Membership Operators:** in (checks if an element is present in a sequence), not in (checks if an element is not present).
-
-  - **Identity Operators:** is (checks if two variables refer to the same object), is not (checks if two variables do not refer to the same object).
-
-These basics provide a foundation for writing Python code. As you explore Python further, you'll delve into more advanced concepts and libraries to build a wide range of applications.
 
 ## What is Django and Getting Started
 ### What is Django?
@@ -471,3 +414,299 @@ By using Gunicorn or Uvicorn in conjunction with your Python web application, yo
 9. `--access-log`: Configures access logging. Example: `--access-log myapp_access.log`.
 
 10. `--error-log`: Configures error logging. Example: `--error-log myapp_error.log`.
+
+# Using Flask for Web Development
+Flask is a lightweight and flexible web framework for Python. It's widely used for developing web applications and APIs. In this section, we'll explore the basics of setting up a Flask project, defining routes, using templates, sending JSON responses, and enabling CORS.
+
+## Setting Up a Flask Project:
+**Installation**: Start by installing Flask using pip:
+
+```
+pip install Flask
+```
+
+**Project Structure**: Organize your project structure with a directory for templates (HTML files) and another for static files (e.g., CSS, JavaScript). Here's a basic project structure:
+
+```shell
+myflaskapp/
+├── app.py
+├── templates/
+│   ├── index.html
+├── static/
+│   ├── style.css
+```
+
+**Creating a Flask App**: In your app.py file, import Flask and create a Flask app:
+
+```py
+from flask import Flask
+
+app = Flask(__name__)
+```
+## Writing Routes:
+Routes define the URLs that your application responds to. You can define routes using the @app.route decorator. Here's an example route that renders an HTML template:
+
+```py
+@app.route('/')
+def index():
+    return render_template('index.html')
+```
+## Using Templates:
+Flask supports rendering templates using the Jinja2 templating engine. You can pass variables to templates and use them to generate dynamic content. For example, in your index.html template:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to My Flask App</h1>
+    <p>{{ message }}</p>
+</body>
+</html>
+```
+
+In your route function:
+
+```py
+@app.route('/')
+def index():
+    message = "Hello, Flask!"
+    return render_template('index.html', message=message)
+```
+## Sending JSON Responses:
+To send JSON responses, you can use Flask's jsonify function. Here's an example route that returns a JSON response:
+
+```py
+from flask import jsonify
+
+@app.route('/api/data')
+def api_data():
+    data = {"message": "This is JSON data"}
+    return jsonify(data)
+```
+## Enabling CORS:
+If you need to enable Cross-Origin Resource Sharing (CORS) for your API, you can use the Flask-CORS extension. First, install it:
+
+```bash
+pip install flask-cors
+```
+Then, initialize and configure it in your Flask app:
+
+```py
+from flask_cors import CORS
+
+
+CORS(app)
+```
+This allows your API to respond to requests from different domains.
+
+Flask provides a simple and flexible way to build web applications and APIs. By following these steps, you can set up a Flask project, define routes, use templates, send JSON responses, and enable CORS as needed for your application.
+
+# Working with FastAPI
+FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.7+ based on standard Python type hints. It's designed to be easy to use, highly performant, and suitable for both beginners and experienced developers. In this section, we'll explore the basics of setting up a FastAPI project, defining routes, sending JSON responses, and enabling CORS.
+
+## Setting Up a FastAPI Project:
+Installation: Start by installing FastAPI using pip:
+
+```bash
+pip install fastapi
+```
+## Project Structure: 
+Organize your project structure as needed. Here's a basic project structure:
+
+```bash
+myfastapiapp/
+├── main.py
+```
+## Creating a FastAPI App: 
+In your main.py file, import FastAPI and create a FastAPI app:
+
+```py
+from fastapi import FastAPI
+
+app = FastAPI()
+```
+## Writing Routes:
+Routes in FastAPI are defined using Python functions and standard Python type hints. You can use decorators to define routes and specify HTTP methods. Here's an example route that returns "Hello, FastAPI!" as a response:
+
+```py
+@app.get('/')
+def read_root():
+    return {"message": "Hello, FastAPI!"}
+```
+## Sending JSON Responses:
+FastAPI makes it easy to send JSON responses. Just return Python dictionaries or Pydantic models from your route functions, and FastAPI will automatically convert them to JSON. Here's an example of a route that returns JSON data:
+
+```py
+from typing import Dict
+
+@app.get('/api/data')
+def get_data() -> Dict[str, str]:
+    data = {"message": "This is JSON data"}
+    return data
+```
+## Enabling CORS:
+To enable Cross-Origin Resource Sharing (CORS) for your FastAPI application, you can use the fastapi.middleware.cors module. First, install it:
+
+```bash
+pip install fastapi[all]
+```
+Then, add CORS middleware to your FastAPI app:
+
+```py
+from fastapi.middleware.cors import CORSMiddleware
+
+# Define allowed origins, methods, and headers as needed
+origins = [
+    "http://localhost",
+    "http://localhost:3000",  # Example: Allow requests from a specific domain
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_methods=["*"],
+    allow_headers=["*"],
+    allow_credentials=True,
+)
+```
+
+This configuration allows your FastAPI application to accept requests from the specified origins.
+
+FastAPI is a powerful and modern web framework for building APIs with Python. By following these steps, you can set up a FastAPI project, define routes, send JSON responses, and enable CORS to build robust and performant APIs.
+
+# SQLAlchemy: A Python SQL Toolkit and Object-Relational Mapping (ORM) Library
+SQLAlchemy is a popular Python library that provides a set of high-level API for interacting with relational databases. It offers both a SQL expression language and an Object-Relational Mapping (ORM) framework, allowing developers to work with databases using Python objects and queries. SQLAlchemy is widely used in web development, data applications, and other projects that require database interaction.
+
+## Example of How to Use SQLAlchemy with Flask:
+Flask is a popular web framework for building web applications in Python. SQLAlchemy integrates seamlessly with Flask to provide database support. Here's an example of how to set up SQLAlchemy with Flask:
+
+### Installation: 
+First, install Flask and SQLAlchemy using pip:
+
+```bash
+pip install Flask SQLAlchemy
+```
+### Creating a Flask App: 
+In your Flask application, create an instance of the Flask app and configure the database URL. For example:
+
+```py
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydatabase.db'
+db = SQLAlchemy(app)
+```
+This configures Flask to use an SQLite database named mydatabase.db. You can replace it with the URL of your preferred database (e.g., PostgreSQL, MySQL).
+
+### Defining Database Models: 
+Define your database models as Python classes using SQLAlchemy's ORM. For example:
+
+```py
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+
+    def __repr__(self):
+        return f'<User {self.username}>'
+```
+### Creating and Using the Database: 
+You can create the database and interact with it using SQLAlchemy's API. For example, to create the tables defined in your models:
+
+```py
+with app.app_context():
+    db.create_all()
+```
+### Using SQLAlchemy in Routes: 
+In your Flask routes, you can use SQLAlchemy to perform database operations. For instance, to create a new user:
+
+```py
+@app.route('/create_user/<username>/<email>')
+def create_user(username, email):
+    user = User(username=username, email=email)
+    db.session.add(user)
+    db.session.commit()
+    return 'User created successfully'
+```
+## Example of How to Use SQLAlchemy with FastAPI:
+FastAPI is another modern Python web framework that can be used with SQLAlchemy for building APIs. Here's an example of how to set up SQLAlchemy with FastAPI:
+
+### Installation: 
+Install FastAPI, SQLAlchemy, and the required database driver using pip:
+
+```bash
+pip install fastapi[all] sqlalchemy
+```
+### Creating a FastAPI App: 
+In your FastAPI application, create an instance of the FastAPI app and configure the database URL. For example:
+
+```py
+from fastapi import FastAPI
+from sqlalchemy import create_engine
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
+
+app = FastAPI()
+
+# Configure the database URL
+DATABASE_URL = 'sqlite:///./mydatabase.db'
+engine = create_engine(DATABASE_URL)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+Base = declarative_base()
+```
+
+Replace the database URL with your preferred database connection string.
+
+### Defining Database Models: 
+Define your database models as Python classes using SQLAlchemy's ORM. For example:
+
+```py
+from sqlalchemy import Column, Integer, String
+
+class User(Base):
+    __tablename__ = "users"
+
+    id = Column(Integer, primary_key=True, index=True)
+    username = Column(String, unique=True, index=True)
+    email = Column(String, unique=True, index=True)
+```
+### Creating and Using the Database: 
+Create the database tables defined in your models:
+
+```py
+from sqlalchemy.orm import Session
+
+def create_db():
+    Base.metadata.create_all(bind=engine)
+
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+```
+### Using SQLAlchemy in FastAPI Routers: 
+In your FastAPI routers, you can use SQLAlchemy to perform database operations. For instance, to create a new user:
+
+```py
+from fastapi import Depends, HTTPException, status
+from sqlalchemy.orm import Session
+from .models import User
+from .database import get_db
+
+def create_user(db: Session = Depends(get_db), username: str, email: str):
+    user = User(username=username, email=email)
+    db.add(user)
+    db.commit()
+    db.refresh(user)
+    return user
+```
+
+These examples demonstrate how to use SQLAlchemy with Flask and FastAPI for database operations in your web applications and APIs. SQLAlchemy provides a powerful and flexible way to work with databases using Python.
