@@ -24,9 +24,9 @@ You will be required to meet 80% completion of homework assignments at the end o
 
 - Start date: **10/31/2023**
 - End date: **5/04/2024**
-- Tuesday & Wedesday: **6:30pm-10:45pm**
+- Tuesday & Wednesday: **6:30pm-10:45pm**
 - Saturday: **10am-6pm**
-- Holidays:   11-11, 11-22, 11-23, 11-25, 12-26, 12-27, 12-28-12-30, 2024-01-13, 2024-02-17
+- Holidays:   11-11, 11-22, 11-23, 11-25, 12-26, 12-27, 12-28, 12-30, 2024-01-13, 2024-02-17
 
 ## Office Hours/Open QA Hours:
 
@@ -37,7 +37,7 @@ Office Hours will be Pinned in Help Channel
 <br>
 
 ## In Class
-* Before class:
+* **BEFORE** class:
   * Find the zoom link for the day sent out in the classroom slack channel
   * Let IA know if you are running late!
 * In class:
@@ -52,8 +52,10 @@ Office Hours will be Pinned in Help Channel
 
 | Name  | Role |
 | ----- | ----- |
-| Alex Merced  |  Lead Instructor 
-| Kyle Canamar | Senior Instructional Associate  
+| Alex Merced  | `LI` Lead Instructor 
+| David Yim  | `LI` Lead Instructor 
+| Kyle Cañamar | `IA` Senior Instructional Associate 
+| Joy Houser | `IA` Instructional Associate
 
 
 <br>
@@ -72,12 +74,12 @@ Office Hours will be Pinned in Help Channel
   - Post in help channel or attend office hours
 
 - Need talk about absence or being late to class
-  - group message to IA's
+  - Group message to IA's
 
 - Need to discuss a personal matter or career advice
-  - group message or personal DM to team members you are comfortable discussing with
-- discuss class payment, rescheduling or dropping class, or special needs
-  - contact the student experience specialist assigned to the cohort
+  - Group message or personal DM to team members you are comfortable discussing with
+- Need to discuss class payment, rescheduling or dropping class, or special needs
+  - Contact the student experience specialist assigned to the cohort
 
 <br>
 <br>
@@ -107,7 +109,7 @@ Assignments and due dates will be listed in the homework slack channel.
 
 ## Lesson Recordings
 
-will be posted in the recordings slack channel
+Will be posted in the recordings slack channel
 
 <br>
 
