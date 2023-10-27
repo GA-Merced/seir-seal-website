@@ -1,11 +1,34 @@
 ---
-title: Useful Tutorials/Resources
-description: A guide in my new Starlight docs site.
+title: External Resources
+description: resources for software development
 ---
 
-Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
-Writing a good guide requires thinking about what your users are trying to do.
+# Terminal
 
-## Further reading
+# Git
 
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
+# HTML
+
+# CSS
+
+# Javascript
+
+# Node
+
+# Python
+
+# Code Challenges
+
+# Coding Games
+
+# Interview Questions
+
+# Job Hunting Advice
+
+# Computer Science
+
+# Other Language
+
+# Project Idea
+
+# Other
