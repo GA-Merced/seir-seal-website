@@ -9,7 +9,7 @@ description: Topics and Lessons for Unit 1 on Fundamentals
 - **Lecture**: [Success at a Bootcamp](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/blob/main/day_01/instructor_notes/2.%20SUCCESS.md)
 - **Lecture**: [How to Navigate the Terminal](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/blob/main/day_01/instructor_notes/3.%20TERMINAL_NAVIGATION.md)
 - **Lecture**: [Intro to Javascript](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/blob/main/day_01/instructor_notes/5.%20INTRO_TO_JAVASCRIPT.md)
-- **Lab**: [Just the Beginning](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/blob/main/day_01/instructor_notes/5.%20INTRO_TO_JAVASCRIPT.md)
+- **Lab**: [Just the Beginning](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/blob/main/day_01/student_labs/just_the_beginning.md)
 - **Homework**: [Homework, The First (Deliverable)](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/tree/main/day_01/homework)
 
 ## Lesson 2 - Learning Git & Javascript
