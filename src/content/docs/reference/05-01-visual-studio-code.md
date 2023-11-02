@@ -1,5 +1,5 @@
 ---
-title: Vsual Studio Code Reference
+title: Visual Studio Code Reference
 description: A reference for visual studio code
 ---
 
