@@ -25,7 +25,7 @@ description: Topics and Lessons for Unit 1 on Fundamentals
 - **Lecture**: [Git Review](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/tree/main/day_03/morning_exercise)
 - **Lecture**: [Intro to Javascript](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/tree/main/day_03/instructor_notes)
 - **Lab**: [Loops & Conditionals](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/blob/main/day_03/student_labs/morning_lab.md)
-- **Lab**: [Arrays & Conditionals](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/blob/main/day_02/student_labs/booleans_and_loops.md)
+- **Lab**: [Arrays & Conditionals](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/blob/main/day_03/student_labs/afternoon_lab.md)
 - **Homework**: [Arrays, Loops and Conditionals (deliverable)](https://git.generalassemb.ly/AlexMerced/unit_1_html_css_js/tree/main/day_03/homework)
 
 ## Lesson 4 - JS Functions and Scope
