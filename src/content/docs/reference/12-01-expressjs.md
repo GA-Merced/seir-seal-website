@@ -1,222 +1,7 @@
 ---
-title: Node/Express
-description: A reference page NodeJS and Express
+title: ExpressJS
+description: A reference page Express
 ---
-
-## Node.js: An Introduction
-
-### What is Node.js?
-
-Node.js is an open-source, server-side JavaScript runtime environment that allows developers to build and run JavaScript applications outside of a web browser. It is based on the V8 JavaScript engine from Google and was created by Ryan Dahl in 2009. Node.js enables developers to use JavaScript for both frontend and backend development, fostering full-stack JavaScript development.
-
-### History of Node.js
-
-Node.js has an interesting history:
-
-- **2009:** Node.js was first introduced by Ryan Dahl, primarily as a way to address the limitations of traditional server-side technologies, which used synchronous, blocking I/O operations.
-- **2010:** The first official release of Node.js (Version 0.1.14) became available.
-- **2011:** The Node Package Manager (NPM) was introduced, revolutionizing package management in the JavaScript ecosystem.
-- **2012:** The Node.js project joined the Linux Foundation, gaining support and contributions from various organizations and developers.
-- **2018:** The release of Node.js 10 brought long-term support (LTS) to the platform, ensuring stability and reliability for enterprise applications.
-- **2020:** Node.js 14, another LTS release, introduced enhanced performance and improved features.
-
-### Why Node.js Matters
-
-Node.js has gained significant popularity for several reasons:
-
-- **Efficiency:** Node.js uses a non-blocking, event-driven architecture that makes it highly efficient for handling concurrent connections and I/O-bound operations. This efficiency is crucial for building real-time applications like chat apps and online gaming platforms.
-
-- **Single Language:** With Node.js, developers can use JavaScript both on the frontend and backend, which simplifies the development process and reduces the need to switch between languages.
-
-- **Large Ecosystem:** Node.js has a vast ecosystem of open-source libraries and modules available through NPM, making it easy for developers to find and use pre-built components in their projects.
-
-- **Scalability:** Node.js is well-suited for building scalable applications, thanks to its ability to handle a large number of concurrent connections without significant performance overhead.
-
-### Use Cases for Node.js
-
-Node.js is versatile and finds application in various areas, including:
-
-- **Web Servers:** Node.js is commonly used to build lightweight, high-performance web servers. Popular frameworks like Express.js simplify the process of creating web applications.
-
-- **Real-time Applications:** It is ideal for developing real-time applications such as chat applications, online gaming, and collaborative tools that require instant data updates.
-
-- **API Servers:** Node.js is often chosen for building API servers that serve as the backend for mobile and web applications, providing data and services.
-
-- **Microservices:** In a microservices architecture, Node.js can power individual services due to its efficiency and scalability.
-
-- **IoT (Internet of Things):** Node.js is suitable for developing applications for IoT devices, where real-time data processing is essential.
-
-Node.js continues to evolve, and its community actively contributes to its growth, making it a popular choice for modern application development.
-
-## NodeJS CLI Commands
-
-### Part 1
-
-| Purpose                                      | Syntax                                       | Example                                                |
-|----------------------------------------------|----------------------------------------------|--------------------------------------------------------|
-| Check Node.js version                        | `node -v`                                   | `$ node -v` -> `v14.17.6`                             |
-| Run a JavaScript file                       | `node filename.js`                          | `$ node script.js`                                    |
-| Start a Node.js REPL (Read-Eval-Print Loop)  | `node`                                       | `$ node`                                              |
-| Execute JavaScript code directly             | `node -e "JavaScript code"`                 | `$ node -e "console.log('Hello, Node.js!')"`         |
-| Install a Node.js package globally           | `npm install -g package-name`               | `$ npm install -g express`                            |
-| Initialize a new Node.js project             | `npm init`                                  | `$ npm init`                                          |
-| Install dependencies from `package.json`     | `npm install`                               | `$ npm install`                                       |
-| Install a specific version of a package      | `npm install package-name@version`          | `$ npm install lodash@4.17.21`                        |
-| Install a package and save it as a dependency | `npm install package-name --save`         | `$ npm install axios --save`                         |
-| Install a package as a development dependency | `npm install package-name --save-dev`     | `$ npm install jest --save-dev`                       |
-| List installed packages                     | `npm list`                                  | `$ npm list`                                          |
-| Update all packages to their latest versions | `npm update`                                | `$ npm update`                                        |
-| Uninstall a package                         | `npm uninstall package-name`                | `$ npm uninstall lodash`                              |
-| Run a script defined in `package.json`       | `npm run script-name`                       | `$ npm run start`                                     |
-| Check for outdated packages                  | `npm outdated`                              | `$ npm outdated`                                      |
-
-### Part 2
-
-| Purpose                                      | Syntax                                       | Example                                                |
-|----------------------------------------------|----------------------------------------------|--------------------------------------------------------|
-| Display detailed information about a package  | `npm show package-name`                     | `$ npm show express`                                  |
-| Search for packages in the npm registry      | `npm search package-name`                   | `$ npm search request`                                |
-| Check the location of global npm packages    | `npm root -g`                               | `$ npm root -g`                                       |
-| List globally installed packages             | `npm list -g --depth=0`                     | `$ npm list -g --depth=0`                            |
-| View the npm configuration                   | `npm config list`                           | `$ npm config list`                                   |
-| Set a specific configuration value           | `npm config set key value`                  | `$ npm config set proxy http://proxy.example.com`     |
-| List outdated packages globally              | `npm outdated -g --depth=0`                 | `$ npm outdated -g --depth=0`                        |
-| List top-level dependencies in a project     | `npm ls --depth=0`                          | `$ npm ls --depth=0`                                  |
-| Remove all packages from `node_modules`      | `npm ls --depth=0 | awk -F/ '/node_modules/ && !/\/npm$/ {print $NF}' | xargs npm -g rm` | `$ npm ls --depth=0 | awk -F/ '/node_modules/ && !/\/npm$/ {print $NF}' | xargs npm -g rm` |
-| Install a specific version of Node.js        | Use a Node Version Manager (NVM) like `nvm` | Install and manage Node.js versions with `nvm`       |
-| Check npm version                            | `npm --version`                             | `$ npm --version`                                     |
-| Display Node.js usage help                   | `node --help`                               | `$ node --help`                                       |
-| Generate a Node.js heap dump                 | `node --heapdump=filename`                  | `$ node --heapdump=mydump.heapsnapshot`               |
-| Debug Node.js using the built-in debugger    | `node inspect script.js`                   | `$ node inspect app.js`                              |
-| Run a Node.js script with debugging enabled  | `node --inspect-brk script.js`              | `$ node --inspect-brk app.js`                         |
-| Use a custom JavaScript file for debugging   | `node --require custom-debug.js script.js`  | `$ node --require my-debug.js app.js`                |
-| Profile Node.js application                  | `node --prof script.js`                     | `$ node --prof app.js`                                |
-| Generate flamegraph from a V8 log file      | `node --prof-process --preprocess -j v8.log > output.svg` | `$ node --prof-process --preprocess -j v8.log > output.svg` |
-
-### Part 3
-
-| Purpose                                      | Syntax                                       | Example                                                |
-|----------------------------------------------|----------------------------------------------|--------------------------------------------------------|
-| Update a globally installed package          | `npm update -g package-name`                | `$ npm update -g express`                             |
-| Install a package locally and save as a dev dependency | `npm install package-name --save-dev` | `$ npm install jest --save-dev`                       |
-| Execute scripts defined in `package.json`    | `npm run script-name`                       | `$ npm run test`                                      |
-| Display a list of available scripts          | `npm run`                                   | `$ npm run`                                           |
-| Set the registry for npm                      | `npm set registry registry-url`             | `$ npm set registry https://registry.npmjs.org/`      |
-| Log in to an npm registry (authenticate)      | `npm login`                                 | `$ npm login`                                         |
-| Log out from an npm registry (deauthenticate) | `npm logout`                                | `$ npm logout`                                        |
-| Create a new npm user account                | `npm adduser`                               | `$ npm adduser`                                       |
-| Check Node.js's ability to reach the network  | `npm ping`                                  | `$ npm ping`                                          |
-| List available npm scripts and their descriptions | `npm scripts`                           | `$ npm scripts`                                       |
-| Show npm package details                     | `npm show package-name`                     | `$ npm show lodash`                                   |
-| Check for npm registry connectivity issues   | `npm doctor`                                | `$ npm doctor`                                        |
-| Display npm's help documentation              | `npm help`                                  | `$ npm help`                                          |
-| Install packages with a specific node version | `npm install package-name --engine-strict` | `$ npm install package-name --engine-strict`           |
-| List globally installed packages in a long format | `npm ls -g --long`                      | `$ npm ls -g --long`                                  |
-| Install packages with a custom registry URL   | `npm install package-name --registry custom-registry-url` | `$ npm install lodash --registry https://my-registry.com` |
-| Display the current npm configuration         | `npm config list`                          | `$ npm config list`                                   |
-| Show the package.json configuration            | `npm config list --json`                   | `$ npm config list --json`                            |
-| Access the npm cache directory                | `npm config get cache`                     | `$ npm config get cache`                              |
-| Verify the integrity of cached packages       | `npm cache verify`                         | `$ npm cache verify`                                  |
-| Clean the npm cache                            | `npm cache clean`                          | `$ npm cache clean`                                   |
-| List installed global packages                | `npm ls -g --depth=0`                      | `$ npm ls -g --depth=0`                               |
-| View package documentation in a web browser   | `npm docs package-name`                    | `$ npm docs express`                                  |
-| View the npm audit report for a package       | `npm audit`                                | `$ npm audit`                                         |
-| Run npm audit fix to automatically fix issues | `npm audit fix`                            | `$ npm audit fix`                                     |
-
-## Package.json
-
-### What is package.json?
-In Node.js, the package.json file is a manifest file that contains metadata about a Node.js application or package. It serves multiple purposes:
-
-- **Dependency Management:** It lists all the dependencies (external packages) required by the application, including their versions.
-
-- **Script Definitions:** It defines various scripts that can be run using npm commands, such as running tests, starting the application, or building assets.
-
-- **Metadata:** It includes metadata about the application, such as its name, version, description, author, and license information.
-
-- **Configuration:** It can store configuration settings for the project, which can be accessed programmatically.
-
-package.json Properties and Their Purposes
-Here is a list of commonly used properties in a package.json file and their purposes:
-
-| Property             | Purpose                                               |
-|----------------------|-------------------------------------------------------|
-| `name`               | Specifies the name of the package or application.    |
-| `version`            | Indicates the version of the package.                |
-| `description`        | Provides a brief description of the package.         |
-| `keywords`           | Lists keywords to help with package discovery.       |
-| `repository`         | Specifies the source code repository URL.            |
-| `author`             | Specifies the name and contact details of the author.|
-| `license`            | Defines the package's license type.                  |
-| `dependencies`       | Lists production dependencies required for the app.  |
-| `devDependencies`    | Lists development dependencies required for testing. |
-| `scripts`            | Defines custom scripts that can be run with `npm`.   |
-| `main`               | Specifies the entry point JavaScript file.           |
-| `bin`                | Maps package commands to executable scripts.         |
-| `engines`            | Specifies Node.js and npm version requirements.      |
-| `private`            | Marks the package as private (not for publication).  |
-| `homepage`           | Provides a URL to the project's homepage.           |
-| `bugs`               | Points to the issue tracker for bug reporting.      |
-| `contributors`       | Lists contributors to the project.                  |
-| `scripts.start`      | Defines the command to start the application.        |
-| `scripts.test`       | Defines the command to run tests.                   |
-| `scripts.build`      | Specifies the build command for the project.        |
-| `scripts.prepublish` | A script that runs before publishing the package.   |
-| `scripts.clean`      | Defines a custom clean-up script.                   |
-| `scripts.lint`       | Defines a linting script for code quality checks.   |
-| `scripts.deploy`     | Specifies a deployment script.                       |
-
-### Example Package.json
-
-```json
-{
-  "name": "my-node-app",
-  "version": "1.0.0",
-  "description": "A sample Node.js application",
-  "keywords": ["node", "sample", "example"],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourusername/my-node-app"
-  },
-  "author": "Your Name <youremail@example.com>",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.17.1",
-    "axios": "^0.21.1"
-  },
-  "devDependencies": {
-    "jest": "^27.0.6",
-    "eslint": "^7.32.0"
-  },
-  "scripts": {
-    "start": "node server.js",
-    "test": "jest",
-    "build": "webpack --config webpack.config.js",
-    "prepublish": "npm run build",
-    "clean": "rm -rf dist",
-    "lint": "eslint .",
-    "deploy": "npm run build && rsync -avz dist/ user@server:/path/to/remote/directory"
-  },
-  "main": "server.js",
-  "bin": {
-    "myapp": "./bin/myapp"
-  },
-  "engines": {
-    "node": ">=14.0.0",
-    "npm": ">=6.0.0"
-  },
-  "private": false,
-  "homepage": "https://github.com/yourusername/my-node-app#readme",
-  "bugs": {
-    "url": "https://github.com/yourusername/my-node-app/issues"
-  },
-  "contributors": [
-    "Contributor1 <contributor1@example.com>",
-    "Contributor2 <contributor2@example.com>"
-  ]
-}
-
-```
 
 ## Introduction to Express.js
 ### What is Express.js?
@@ -568,3 +353,159 @@ Render EJS views in your route handlers using res.render() and pass data as need
 
 EJS provides a flexible and straightforward way to generate dynamic HTML content in Express.js applications, making it a popular choice for many web developers.
 
+## Writing Custom Middleware in Express.js
+Middleware in Express.js is a crucial component that allows you to handle requests and responses at various stages of the application's request-response cycle. Custom middleware functions can be created to perform specific tasks, enhance the functionality of your Express application, and encapsulate common functionality. Below, we'll cover how to write custom middleware functions, how to register them in different scopes, and common use cases.
+
+### How to Write a Middleware Function
+A middleware function in Express.js is a JavaScript function with access to the `request (req)`, `response (res)`, and next parameters. It can perform tasks, modify the request or response objects, or end the request-response cycle.
+
+Example of a custom middleware function:
+
+```js
+function customMiddleware(req, res, next) {
+  // Middleware logic here
+  console.log('Custom middleware executed.');
+  // Call next() to pass control to the next middleware or route handler
+  next();
+}
+```
+
+### Registering Middleware
+#### 1. Registering Middleware Globally
+To register middleware globally and apply it to all routes, you can use the app.use() method in your Express application.
+
+Example:
+
+```js
+const express = require('express');
+const app = express();
+
+app.use(customMiddleware); // Register the custom middleware globally
+
+// Define routes and additional middleware here
+```
+
+#### 2. Registering Middleware with a Router
+You can register middleware with a specific router to apply it only to routes defined within that router.
+
+Example:
+
+```js
+const express = require('express');
+const router = express.Router();
+
+router.use(customMiddleware); // Register the custom middleware with the router
+
+// Define routes for this router
+router.get('/', (req, res) => {
+  // Route-specific logic
+});
+
+// Use the router in your application
+app.use('/api', router); // Mount the router under the '/api' path
+```
+
+#### 3. Registering Middleware with a Route
+You can register middleware with a specific route to apply it only to that route.
+
+Example:
+
+```js
+const express = require('express');
+const app = express();
+
+// Register the custom middleware for a specific route
+app.get('/special', customMiddleware, (req, res) => {
+  // Route-specific logic
+});
+```
+
+### Use Cases for Middleware
+Middleware in Express.js can be used for various purposes. Here are some common use cases:
+
+**Authentication:** Verify user authentication and authorization before allowing access to protected routes.
+
+**Logging:** Log request details, such as IP address, HTTP method, URL, and timestamp, for debugging and auditing purposes.
+
+**Request Parsing:** Parse request body data, query parameters, or headers before processing the request.
+
+**Error Handling:** Handle errors and provide consistent error responses to clients.
+
+**Security:** Implement security measures, such as setting HTTP headers to prevent common security vulnerabilities like Cross-Site Scripting (XSS) and Cross-Origin Resource Sharing (CORS).
+
+**Validation:** Validate user input data and ensure it meets specific criteria before processing it.
+
+**Caching:** Implement caching mechanisms to improve performance by serving cached responses for frequently accessed data.
+
+**Compression:** Compress response data to reduce bandwidth usage and improve client-side performance.
+
+**Rate Limiting:** Limit the number of requests a client can make within a specified time period to prevent abuse or excessive resource consumption.
+
+**Route-specific Logic:** Execute route-specific logic or pre-processing, such as setting up data for rendering templates.
+
+By creating and using custom middleware functions, you can modularize your Express.js application, enhance its functionality, and ensure consistent behavior across routes and requests. Middleware allows you to separate concerns and apply reusable logic to different parts of your application's request-response cycle.
+
+## Alternatives to ExpressJS
+
+### Koa Framework
+Koa is a minimalistic and lightweight web framework for Node.js. It was developed by the creators of Express.js and is designed to provide a more modern and streamlined approach to building web applications. Koa emphasizes the use of asynchronous functions, known as middleware, to handle requests and responses.
+
+Example of a Basic Koa Server with Two Routes
+```js
+const Koa = require('koa');
+const Router = require('koa-router');
+
+const app = new Koa();
+const router = new Router();
+
+// Middleware for the root route "/"
+router.get('/', async (ctx) => {
+  ctx.body = 'Hello, Koa!';
+});
+
+// Middleware for the "/helloworld/:param" route
+router.get('/helloworld/:param', async (ctx) => {
+  const { param } = ctx.params;
+  ctx.body = `Hello, ${param} from Koa!`;
+});
+
+app.use(router.routes());
+app.use(router.allowedMethods());
+
+app.listen(3000, () => {
+  console.log('Koa server is running on port 3000');
+});
+```
+
+In this example, we create a Koa server with two routes. The first route, `"/"`, responds with `"Hello, Koa!"` when accessed. The second route, `"/helloworld/:param"`, responds with a personalized greeting based on the param URL parameter.
+
+### Fastify Framework
+Fastify is a high-performance web framework for Node.js. It's known for its speed and efficiency, making it an excellent choice for building fast and scalable web applications. Fastify also supports asynchronous and modern JavaScript features.
+
+Example of a Basic Fastify Server with Two Routes
+```js
+const fastify = require('fastify')();
+
+// Route for the root "/"
+fastify.get('/', async (request, reply) => {
+  return 'Hello, Fastify!';
+});
+
+// Route for the "/helloworld/:param" route
+fastify.get('/helloworld/:param', async (request, reply) => {
+  const { param } = request.params;
+  return `Hello, ${param} from Fastify!`;
+});
+
+fastify.listen(3000, (err) => {
+  if (err) {
+    console.error('Error starting Fastify server:', err);
+    process.exit(1);
+  }
+  console.log('Fastify server is running on port 3000');
+});
+```
+
+In this example, we create a Fastify server with two routes. The first route, `"/"`, responds with `"Hello, Fastify!"` when accessed. The second route, `"/helloworld/:param"`, responds with a personalized greeting based on the param URL parameter.
+
+Both Koa and Fastify offer modern and efficient alternatives to Express.js for building web applications in Node.js. Depending on your specific requirements and preferences, you can choose the framework that best suits your project.
