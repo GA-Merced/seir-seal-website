@@ -92,7 +92,3 @@ description: Topics and Lessons for Unit 1 on Fundamentals
 
 ## Unit Project 1
 - [Project Markdown](https://git.generalassemb.ly/AlexMerced/lessons/blob/main/projects/project1.md)
-
-## Further reading
-
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
