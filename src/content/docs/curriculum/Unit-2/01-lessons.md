@@ -39,16 +39,17 @@ description: Topics and Lessons for Unit 2 on backend with NodeJS & Express
 ## Lesson 5 - MongoDB
 
 - **[Lecture - HTML/CSS Forms](https://turmeric.seircohort.com/full-stack-development/week-9/day-3/lecture-materials/html-css-forms)**
+- **[Lecture - Intro to MongoDB](https://git.generalassemb.ly/kcanamar/sei_lessons/blob/main/unit2/intro-to-mongodb.md)**
 - **[Lecture - Setting up Mongo Atlas](https://turmeric.seircohort.com/full-stack-development/week-9/day-2/lecture-materials/create-an-atlas-hosted-mongodb/)**
 
 ## Lesson 6 - Mongoose
 
-- **[Lecture - Intro to Mongoose](https://turmeric.seircohort.com/full-stack-development/week-9/day-3/lecture-materials/intro-to-mongoose)**
+- **[Lecture - Intro to Mongoose](https://git.generalassemb.ly/kcanamar/sei_lessons/blob/main/unit2/intro-to-mongoose.md)**
 - **[Lecture - CRUD App with Mongoose](https://turmeric.seircohort.com/full-stack-development/week-9/day-3/lecture-materials/crud-app-with-mongoose)**
 
 ## Lesson 7 - Full Stack Build
 
-- **[Lecture - Creating a Seed Route](https://turmeric.seircohort.com/full-stack-development/week-9/day-3/lecture-materials/intro-to-mongoose)**
+- **[Lecture - Creating a Seed Route](https://git.generalassemb.ly/kcanamar/sei_lessons/blob/main/unit2/creating-a-seed-route.md)**
 - **[Lecture - CRUD App with Mongoose](https://turmeric.seircohort.com/full-stack-development/week-9/day-3/lecture-materials/crud-app-with-mongoose)**
 - **[Resource - How to Deploy a Express App with Render or Railway](https://www.youtube.com/watch?v=YhOGojgR3O4&t=1s&pp=ygUkRGVwbG95IEV4cHJlc3MgdG8gUmVuZGVyIEFsZXggTWVyY2Vk)**
 
