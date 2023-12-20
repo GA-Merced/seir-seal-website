@@ -124,6 +124,8 @@ const User = mongoose.model('User', userSchema);
 
 You can now use the User model to perform Create, Read, Update, and Delete (CRUD) operations on your MongoDB collection. Here are some examples:
 
+[EXAMPLE IN EXPRESSJS](https://gist.github.com/AlexMercedCoder/484b3e3410cf98ba8556043ec08d2bdf)
+
 #### Create a new user:
 
 ```js
