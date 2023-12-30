@@ -61,3 +61,7 @@ description: Topics and Lessons for Unit 2 on backend with NodeJS & Express
 ## Lesson 9 - Deployment
 
 - **[Deployment](https://turmeric.seircohort.com/full-stack-development/week-10/day-1/lecture/deployment/)**
+
+## Lesson 10 - Session Based Auth
+
+- **[MVC Build with Session Based Auth](https://git.generalassemb.ly/AlexMerced/lessons/blob/main/uni2/express-ejs-mongo-sessions.md)**

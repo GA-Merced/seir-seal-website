@@ -1,97 +1,51 @@
 ---
 title: Unit 3 Lessons Rubric
-description: Topics and Lessons for Unit 3
+description: Topics and Lessons for Unit 3 on Frontend Development with React
 ---
 
-## Lesson 1 - Topic
+- [Learn React Playlist](https://www.youtube.com/playlist?list=PLY6oTPmKnKbZvTaGTs4HQFzuTBR1l1lBT)
 
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
+## Lesson 1 - Intro to React
 
-## Lesson 2 - Topic
+- **Lecture**: [Intro to React](https://git.generalassemb.ly/SEIR-AM-RESOURCES/Unit_3_React_Express/blob/main/Day_01/lecture.md)
+- **Lab**: [Intro to React](https://git.generalassemb.ly/SEIR-AM-RESOURCES/Unit_3_React_Express/blob/main/Day_01/lab.md)
+- **Homework**: [React Mini Portfolio - Deliverable](https://git.generalassemb.ly/SEIR-AM-RESOURCES/Unit_3_React_Express/blob/main/Day_01/homework.md)
 
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
+## Lesson 2 - React Props
 
-## Lesson 3 - Topic
+- **Lecture**: [React Props](https://git.generalassemb.ly/SEIR-AM-RESOURCES/Unit_3_React_Express/blob/main/Day_02/lecture.md)
+- **Lab**: [React Props](https://git.generalassemb.ly/SEIR-AM-RESOURCES/Unit_3_React_Express/blob/main/Day_02/lab.md)
+- **Homework**: [React Props - Deliverable](https://git.generalassemb.ly/SEIR-AM-RESOURCES/Unit_3_React_Express/blob/main/Day_02/homework.md)
 
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
+## Lesson 3 - React State
 
-## Lesson 4 - Topic
+- **Lecture**: [React State](https://git.generalassemb.ly/SEIR-AM-RESOURCES/Unit_3_React_Express/blob/main/Day_03/lecture.md)
+- **Lab**: [React State](https://git.generalassemb.ly/SEIR-AM-RESOURCES/Unit_3_React_Express/blob/main/Day_03/lab.md)
+- **Homework**: [React State - Non-Deliverable](https://git.generalassemb.ly/SEIR-AM-RESOURCES/Unit_3_React_Express/blob/main/Day_03/homework.md)
 
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
+## Lesson 4 - UseEffect & Making API Calls
 
-## Lesson 5 - Topic
+- **Lecture**: [OMDB App in React](https://git.generalassemb.ly/SEIR-AM-RESOURCES/Unit_3_React_Express/blob/main/Day_04/lecture.md)
+- **Lab**: [Giphy](https://git.generalassemb.ly/SEIR-AM-RESOURCES/Unit_3_React_Express/blob/main/Day_04/lab.md)
+- **Homework**: [jService Trivia App - Deliverable](https://git.generalassemb.ly/SEIR-AM-RESOURCES/Unit_3_React_Express/blob/main/Day_04/homework.md)
 
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
+## Lesson 5 - React Router (Data Routers)
 
-## Lesson 6 - Topic
+- **Lecture**: [Bitcoin Finder App](https://git.generalassemb.ly/AlexMerced/lessons/blob/main/unit3/router-lecture.md)
+- **Lab**: [Stocks App](https://git.generalassemb.ly/SEIR-AM-RESOURCES/Unit_3_React_Express/blob/main/Day_05/lab.md)
 
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
+## Lesson 6 - Full Stack Express + React Build
 
-## Lesson 7 - Topic
+- **Lecture**: [Backend Express Build](https://git.generalassemb.ly/AlexMerced/lessons/blob/main/unit3/build-backend.md)
+- **Lecture**: [Frontend React Build Part 1](https://git.generalassemb.ly/AlexMerced/lessons/blob/main/unit3/build-frontend-1.md)
+- **Lecture**: [Frontend React Build Part 2](https://git.generalassemb.ly/AlexMerced/lessons/blob/main/unit3/build-frontend-2.md)
+- **Homework**: Deliverable - Rebuilding the Build as a "Cheese" App (details at end of build lectures)
 
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
+## Lesson 8 - Group Git
 
-## Lesson 8 - Topic
+- In Class Coverage of Git Pull Requests, Branching, Merging
+- **Homework**: [Group Homework - Bookmark'd](https://git.generalassemb.ly/AlexMerced/SEIR-Baby-Yoda/tree/master/unit_3/w07d04/homework) **Built and Deployed as team using Express/Mongo/React**
 
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
-
-## Lesson 9 - Topic
-
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
-
-## Lesson 10 - Topic
-
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
-
-## Lesson 11 - Topic
-
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
-
-## Lesson 12 - Topic
-
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
-
-## Lesson 13 - Topic
-
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
-
-## Lesson 14 - Topic
-
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
-
-## Lesson 15 - Topic
-
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
 
 ## Further reading
 
