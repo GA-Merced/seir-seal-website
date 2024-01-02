@@ -3,7 +3,7 @@ title: Unit 3 Lessons Rubric
 description: Topics and Lessons for Unit 3 on Frontend Development with React
 ---
 
-- [Learn React Playlist](https://www.youtube.com/playlist?list=PLY6oTPmKnKbZvTaGTs4HQFzuTBR1l1lBT)
+- [Learn React Playlist](https://www.youtube.com/playlist?list=PLY6oTPmKnKbZfwbqWms1mWCmZ8jl8wEMe)
 
 ## Lesson 1 - Intro to React
 
