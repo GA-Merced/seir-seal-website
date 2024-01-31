@@ -34,7 +34,11 @@ description: Topics and Lessons for Unit 3 on Frontend Development with React
 - **Lecture**: [Bitcoin Finder App](https://git.generalassemb.ly/AlexMerced/lessons/blob/main/unit3/router-lecture.md)
 - **Lab**: [Stocks App](https://git.generalassemb.ly/SEIR-AM-RESOURCES/Unit_3_React_Express/blob/main/Day_05/lab.md)
 
-## Lesson 6 - Full Stack Express + React Build
+## Lesson 6 - Portfolio Express/React Lab
+
+- **Lab**: [Portfolio Express/React Lab](https://git.generalassemb.ly/AlexMerced/lessons/blob/main/unit3/portfolio.md)
+
+## Lesson 7 - Full Stack Express + React Build
 
 - **Lecture**: [Backend Express Build](https://git.generalassemb.ly/AlexMerced/lessons/blob/main/unit3/build-backend.md)
 - **Lecture**: [Frontend React Build Part 1](https://git.generalassemb.ly/AlexMerced/lessons/blob/main/unit3/build-frontend-1.md)
@@ -43,9 +47,13 @@ description: Topics and Lessons for Unit 3 on Frontend Development with React
 
 ## Lesson 8 - Group Git
 
-- In Class Coverage of Git Pull Requests, Branching, Merging
-- **Homework**: [Group Homework - Bookmark'd](https://git.generalassemb.ly/AlexMerced/SEIR-Baby-Yoda/tree/master/unit_3/w07d04/homework) **Built and Deployed as team using Express/Mongo/React**
+- [In Class Coverage of Git Pull Requests, Branching, Merging](https://git.generalassemb.ly/AlexMerced/lessons/blob/main/unit3/agile.md)
+- **Homework**: [Group Homework - Bookmark'd](https://git.generalassemb.ly/AlexMerced/lessons/blob/main/unit3/bookmarkd.md) **Built and Deployed as team using Express/Mongo/React**
 
+
+## Bonus - Advanced React State Management (if time)
+- [Demonstration of React Context](https://git.generalassemb.ly/AlexMerced/useContext-Lab)
+- [React Recoil & React Query](https://git.generalassemb.ly/AlexMerced/lessons/blob/main/unit3/recoilrequest.md)
 
 ## Further reading
 
