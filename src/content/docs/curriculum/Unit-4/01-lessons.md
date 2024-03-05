@@ -27,75 +27,32 @@ description: Topics and Lessons for Unit 4
 - **Lecture**: [SQL Basics 2](https://git.generalassemb.ly/AlexMerced/UNIT_4_PYTHON_DJANGO_WITH_TESTS/blob/main/w10d03/4_afternoon_lesson/2.%20SQL_BASICS2.md)
 - **Lecture**: [SQL Joins](https://git.generalassemb.ly/AlexMerced/UNIT_4_PYTHON_DJANGO_WITH_TESTS/blob/main/w10d03/4_afternoon_lesson/3.%20SQL_BASICS_JOINS.md)
 - **Lecture**: [SQL Many to Many Joins](https://git.generalassemb.ly/AlexMerced/UNIT_4_PYTHON_DJANGO_WITH_TESTS/blob/main/w10d03/4_afternoon_lesson/4.%20SQL_Many_to_Many_JOINS.md)
-- **Lab**: [Name of Lecture]()
+- **Lab**: [Comps vs TVs](https://git.generalassemb.ly/AlexMerced/UNIT_4_PYTHON_DJANGO_WITH_TESTS/blob/main/w10d03/3_morning_lab/COMPTV.md)
+- **Lab**: [SQL Flights](https://git.generalassemb.ly/AlexMerced/UNIT_4_PYTHON_DJANGO_WITH_TESTS/tree/main/w10d03/5_afternoon_lab)
+- **Homework**: [Carmen Sandiego & NFL (Deliverable)](https://git.generalassemb.ly/AlexMerced/UNIT_4_PYTHON_DJANGO_WITH_TESTS/tree/main/w10d03/6_homework)
+
+## Lesson 5 - Django
+
+- **Lecture**: [Django Routing](https://git.generalassemb.ly/AlexMerced/UNIT_4_PYTHON_DJANGO_WITH_TESTS/tree/main/w10d04/2_morning_lesson)
+- **Lab**: [Routing Lab](https://git.generalassemb.ly/AlexMerced/UNIT_4_PYTHON_DJANGO_WITH_TESTS/tree/main/w10d04/3_morning_lab)
+- **Lecture**: [Django Models](https://git.generalassemb.ly/AlexMerced/UNIT_4_PYTHON_DJANGO_WITH_TESTS/tree/main/w10d04/4_afternoon_lesson)
+- **Lab**: [Models Lab](https://git.generalassemb.ly/AlexMerced/UNIT_4_PYTHON_DJANGO_WITH_TESTS/tree/main/w10d04/5_afternoon_lab)
+
+## Lesson 6 - Full Stack Build
+
+- **Lecture**: [Backend API](https://git.generalassemb.ly/AlexMerced/UNIT_4_PYTHON_DJANGO_WITH_TESTS/tree/main/w10d05/5_afternoon_lab)
+- **Lecture**: [Frontend Build](https://git.generalassemb.ly/AlexMerced/lessons/blob/main/unit4/frontendreact.md)
 - **Homework**: [Name of Lecture]()
 
-## Lesson 5 - Topic
+## Project 4
 
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
+- [Project 4 Markdown](https://git.generalassemb.ly/AlexMerced/lessons/blob/main/projects/project4.md)
 
-## Lesson 6 - Topic
+## Preparing to Select Capstone Topic
 
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
+- [Capstone Markdown](https://git.generalassemb.ly/AlexMerced/lessons/blob/main/projects/capstone.md)
+- [Capstone Ideas Markdown](https://git.generalassemb.ly/SEIR-AM-RESOURCES/CAPSTONE_IDEAS)
 
-## Lesson 7 - Topic
+## Graduation
 
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
-
-## Lesson 8 - Topic
-
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
-
-## Lesson 9 - Topic
-
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
-
-## Lesson 10 - Topic
-
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
-
-## Lesson 11 - Topic
-
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
-
-## Lesson 12 - Topic
-
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
-
-## Lesson 13 - Topic
-
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
-
-## Lesson 14 - Topic
-
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
-
-## Lesson 15 - Topic
-
-- **Lecture**: [Name of Lecture]()
-- **Lab**: [Name of Lecture]()
-- **Homework**: [Name of Lecture]()
-
-## Further reading
-
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
+- [Post-Cohort Advice](https://git.generalassemb.ly/AlexMerced/Post_Cohort_Todo_list)
